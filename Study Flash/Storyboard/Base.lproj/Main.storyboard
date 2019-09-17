@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Ehs-Xd-0Ft">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Main Course List Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="MainCourseListController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="MainCourseListController" customModule="Study_Flash" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="sUO-bZ-HWn"/>
+                    <connections>
+                        <segue destination="Saa-DF-CUx" kind="show" identifier="showCourseDetails" id="Cpu-LM-mHe"/>
+                        <segue destination="f5D-0r-pzb" kind="presentation" identifier="startNewCourse" id="WGV-aw-uJh"/>
+                        <segue destination="Saa-DF-CUx" kind="show" identifier="backToCourseDetail" animates="NO" id="udT-is-NxN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="783" y="-654"/>
+        </scene>
+        <!--Custom Main Navigation Controller-->
+        <scene sceneID="5Td-YI-jdg">
+            <objects>
+                <navigationController storyboardIdentifier="NavigationController" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Ehs-Xd-0Ft" customClass="CustomMainNavigationController" customModule="Study_Flash" customModuleProvider="target" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="0L3-b7-PcC">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="bxi-11-8nL"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dPF-q1-yi1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-25" y="-654"/>
+        </scene>
+        <!--CoursesDetailViewController-->
+        <scene sceneID="b8d-x7-ffa">
+            <objects>
+                <viewController storyboardIdentifier="CoursesDetailViewController" title="CoursesDetailViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Saa-DF-CUx" customClass="CoursesDetailViewController" customModule="Study_Flash" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="7Gn-Hi-hzC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="xth-Y8-dBs"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="FwF-uf-nka"/>
+                    <connections>
+                        <segue destination="4Uh-Eu-qS6" kind="presentation" identifier="startQuiz" id="GEa-EO-Ts3"/>
+                        <segue destination="hRE-A1-haZ" kind="show" identifier="showStudyProfile" id="hbl-0v-P7i"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="23i-tG-Gnl" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2086" y="-238"/>
+        </scene>
+        <!--Begin New Course View Controller-->
+        <scene sceneID="RXb-rI-eR0">
+            <objects>
+                <viewController storyboardIdentifier="BeginNewCourseViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="f5D-0r-pzb" customClass="BeginNewCourseViewController" customModule="Study_Flash" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="0y8-Qx-edK">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="M9B-ft-QlY"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tNH-4J-URw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="783" y="198"/>
+        </scene>
+        <!--StudyProfileViewController-->
+        <scene sceneID="fu3-FR-qfz">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="StudyProfileViewController" storyboardName="StudyProfile" referencedIdentifier="StudyProfileViewController" id="hRE-A1-haZ" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tij-hQ-U83" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3025" y="-1028"/>
+        </scene>
+        <!--QuizNavigationController-->
+        <scene sceneID="Le9-zJ-bu1">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Question" referencedIdentifier="QuizNavigationController" id="4Uh-Eu-qS6" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Pou-hq-9sF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3396" y="-238"/>
+        </scene>
+    </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="Cpu-LM-mHe"/>
+    </inferredMetricsTieBreakers>
+</document>

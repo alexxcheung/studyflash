@@ -1,0 +1,594 @@
+
+{
+    "courses": [
+	{
+		"id": 1,
+      	"title": "CCNA 1",
+      	"subtitle": "Introduction to Networks",
+      	"chapters": [
+      		{
+      			"id": 1,
+      			"title": "Chapter 1: Explore the Network",
+      			"questions": [
+                    {
+                        "id": 1,
+                        "question": "A company is contemplating whether to use a client/server or a peer-to-peer network. What are three characteristics of a peer-to-peer network? (Choose three.)",
+                        "answers": [
+                            {
+                                "id": 1,
+                                "body": "better security",
+                                "isCorrect": false
+                            },
+                            {
+                                "id": 2,
+                                "body": "easy to create",
+                                "isCorrect": true
+                            },
+                            {
+                                "id": 3,
+                                "body": "better device performance when acting as both client and server",
+                                "isCorrect": false
+                            },
+                            {
+                                "id": 4,
+                                "body": "lacks centralized administration",
+                                "isCorrect": true
+                            },
+                            {
+                              "id": 5,
+                              "body": "less cost to implement",
+                              "isCorrect": true
+                            },
+                            {
+                              "id": 6,
+                              "body": "scalable",
+                              "isCorrect": false
+                            }
+                        ],
+                        "explanation": "Because network devices and dedicated servers are not required, peer-to-peer networks are easy to create, less complex, and have lower costs. Peer-to-peer networks also have no centralized administration. They are less secure, not scalable, and those devices acting as both client and server may perform slower."
+                    },
+    {
+      "id": 2,
+      "question": "Which device performs the function of determining the path that messages should take through internetworks?",
+      "answers": [
+        {
+          "id": 1,
+          "body": "a router",
+          "isCorrect": true
+        },
+        {
+          "id": 2,
+          "body": "a firewall",
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "body": "a web server",
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "body": "a DSL modem",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "A router is used to determine the path that the messages should take through the network. A firewall is used to filter incoming and outgoing traffic. A DSL modem is used to provide Internet connection for a home or an organization."
+    },
+    {
+      "id": 3,
+      "question": "What two criteria are used to help select a network medium from various network media? (Choose two.)",
+      "answers": [
+        {
+          "id": 1,
+          "body": "the types of data that need to be prioritized",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "body": "the cost of the end devices utilized in the network",
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "body": "the distance the selected medium can successfully carry a signal",
+          "isCorrect": true
+        },
+        {
+          "id": 4,
+          "body": "the number of intermediary devices installed in the network",
+          "isCorrect": false
+        },
+        {
+          "id": 5,
+          "body": "the environment where the selected medium is to be installed",
+          "isCorrect": true
+        }
+      ],
+      "explanation": "Criteria for choosing a network medium are the distance the selected medium can successfully carry a signal, the environment in which the selected medium is to be installed, the amount of data and the speed at which the data must be transmitted, and the cost of the medium and its installation."
+    },
+    {
+      "id": 4,
+      "question": "Which two statements describe intermediary devices? (Choose two.)",
+      "answers": [
+        {
+          "id": 1,
+          "body": "Intermediary devices generate data content.",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "body": "Intermediary devices alter data content.",
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "body": "Intermediary devices direct the path of the data.",
+          "isCorrect": true
+        },
+        {
+          "id": 4,
+          "body": "Intermediary devices connect individual hosts to the network.",
+          "isCorrect": true
+        },
+        {
+          "id": 5,
+          "body": "Intermediary devices initiate the encapsulation process.",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "Applications on end devices generate data, alter data content, and are responsible for initiating the encapsulation process."
+    },
+    {
+      "id": 5,
+      "question": "What are two functions of end devices on a network? (Choose two.)",
+      "answers": [
+        {
+          "id": 1,
+          "body": "They originate the data that flows through the network.",
+          "isCorrect": true
+        },
+        {
+          "id": 2,
+          "body": "They direct data over alternate paths in the event of link failures.",
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "body": "They filter the flow of data to enhance security.",
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "body": "They are the interface between humans and the communication network.",
+          "isCorrect": true
+        },
+        {
+          "id": 5,
+          "body": "They provide the channel over which the network message travels.",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "End devices originate the data that flows through the network. Intermediary devices direct data over alternate paths in the event of link failures and filter the flow of data to enhance security. Network media provide the channel through which network messages travel."
+    }
+]
+      		},
+      		{
+      			"id": 2,
+      			"title": "Chapter 2: Configure a Network Operating System",
+      			"questions": [
+      				{
+      "id": 6,
+      "question": "What is the function of the kernel of an operating software?",
+      "answers": [
+        {
+          "id": 1,
+          "body": "It provides a user interface that allows users to request a specific task.",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "body": "The kernel links the hardware drivers with the underlying electronics of a computer.",
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "body": "It is an application that allows the initial configuration of a Cisco device.",
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "body": "The kernel provisions hardware resources to meet software requirements.",
+          "isCorrect": true
+        }
+      ],
+      "explanation": "Operating systems function with a shell, a kernel, and the hardware. The shell interfaces with the users, allowing them to request specific tasks from the device. The kernel provisions resources from the hardware to meet software requirements. The hardware functions by using drivers and their underlying electronics. The hardware represents the physical components of the device."
+    },
+    {
+      "id": 7,
+      "question": "A network administrator needs to keep the user ID, password, and session contents private when establishing remote CLI connectivity with a switch to manage it. Which access method should be chosen?",
+      "answers": [
+        {
+          "id": 1,
+          "body": "Telnet",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "body": "Console",
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "body": "AUX",
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "body": "SSH",
+          "isCorrect": true
+        }
+      ],
+      "explanation": "To be truly private a technician would use a Console connection however if remote management is required SSH provides a secure method."
+    },
+    {
+      "id": 8,
+      "question": "Which procedure is used to access a Cisco 2960 switch when performing an initial configuration in a secure environment?",
+      "answers": [
+        {
+          "id": 1,
+          "body": "Use Telnet to remotely access the switch through the network.",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "body": "Use the console port to locally access the switch from a serial or USB interface of the PC.",
+          "isCorrect": true
+        },
+        {
+          "id": 3,
+          "body": "Use Secure Shell to remotely access the switch through the network.",
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "body": "Use the AUX port to locally access the switch from a serial or USB interface of the PC.",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "Telnet and SSH require active networking services to be configured on a Cisco device before they become functional. Cisco switches do not contain AUX ports."
+    },
+    {
+      "id": 9,
+      "question": "Which command or key combination allows a user to return to the previous level in the command hierarchy?",
+      "answers": [
+        {
+          "id": 1,
+          "body": "end",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "body": "exit",
+          "isCorrect": true
+        },
+        {
+          "id": 3,
+          "body": "Ctrl-Z",
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "body": "Ctrl-C",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "End and CTRL-Z return the user to the privileged EXEC mode. Ctrl-C ends a command in process. The exit command returns the user to the previous level."
+    },
+    {
+      "id": 10,
+      "question": "A router has a valid operating system and a configuration file stored in NVRAM. The configuration file contains an enable secret password but no console password. When the router boots up, which mode will display?",
+      "answers": [
+        {
+          "id": 1,
+          "body": "global configuration mode",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "body": "setup mode",
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "body": "privileged EXEC mode",
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "body": "user EXEC mode",
+          "isCorrect": true
+        }
+      ],
+      "explanation": "If a Cisco IOS device has a valid IOS and a valid configuration file, it will boot into user EXEC mode. A password will be required to enter privileged EXEC mode."
+    }
+      			]
+      		},
+      		{
+      			"id": 3,
+      			"title": "Chapter 3: Network Protocols and Communications",
+      			"questions": [
+      				{
+      "id": 11,
+      "question": "What method can be used by two computers to ensure that packets are not dropped because too much data is being sent too quickly?",
+      "answers": [
+        {
+          "id": 1,
+          "body": "encapsulation",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "body": "flow control",
+          "isCorrect": true
+        },
+        {
+          "id": 3,
+          "body": "access method",
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "body": "response timeout",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "In order for two computers to be able to communicate effectively, there must be a mechanism that allows both the source and destination to set the timing of the transmission and receipt of data. Flow control allows for this by ensuring that data is not sent too fast for it to be received properly."
+    },
+    {
+      "id": 12,
+      "question": "What type of communication will send a message to all devices on a local area network?",
+      "answers": [
+        {
+          "id": 1,
+          "body": "broadcast",
+          "isCorrect": true
+        },
+        {
+          "id": 2,
+          "body": "multicast",
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "body": "unicast",
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "body": "allcast",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "Broadcast communication is a one-to-all communication. A unicast communication is a one-to-one communication. Multicast is a one-to-many communication where the message is delivered to a specific group of hosts. Allcast is not a standard term to describe message delivery."
+    },
+    {
+      "id": 13,
+      "question": "What process is used to place one message inside another message for transfer from the source to the destination?",
+      "answers": [
+        {
+          "id": 1,
+          "body": "access control",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "body": "decoding",
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "body": "encapsulation",
+          "isCorrect": true
+        },
+        {
+          "id": 4,
+          "body": "flow control",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "Encapsulation is the process of placing one message format into another message format. An example is how a packet is placed in its entirety into the data field as it is encapsulated into a frame."
+    },
+    {
+      "id": 14,
+      "question": "A web client is sending a request for a webpage to a web server. From the perspective of the client, what is the correct order of the protocol stack that is used to prepare the request for transmission?",
+      "answers": [
+        {
+          "id": 1,
+          "body": "HTTP, IP, TCP, Ethernet",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "body": "HTTP, TCP, IP, Ethernet",
+          "isCorrect": true
+        },
+        {
+          "id": 3,
+          "body": "Ethernet, TCP, IP, HTTP",
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "body": "Ethernet, IP, TCP, HTTP",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "1. HTTP governs the way that a web server and client interact. 2. TCP manages individual conversations between web servers and clients. 3. IP is responsible for delivery across the best path to the destination. 4. Ethernet takes the packet from IP and formats it for transmission."
+    },
+    {
+      "id": 15,
+      "question": "Which statement is correct about network protocols?",
+      "answers": [
+        {
+          "id": 1,
+          "body": "Network protocols define the type of hardware that is used and how it is mounted in racks.",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "body": "They define how messages are exchanged between the source and the destination.",
+          "isCorrect": true
+        },
+        {
+          "id": 3,
+          "body": "They all function in the network access layer of TCP/IP.",
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "body": "They are only required for exchange of messages between devices on remote networks.",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "Network protocols are implemented in hardware, or software, or both. They interact with each other within different layers of a protocol stack. Protocols have nothing to do with the installation of the network equipment. Network protocols are required to exchange information between source and destination devices in both local and remote networks."
+    },
+    {
+      "id": 16,
+      "question": "Which statement is true about the TCP/IP and OSI models?",
+      "answers": [
+        {
+          "id": 1,
+          "body": "The TCP/IP transport layer and OSI Layer 4 provide similar services and functions.",
+          "isCorrect": true
+        },
+        {
+          "id": 2,
+          "body": "The TCP/IP network access layer has similar functions to the OSI network layer.",
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "body": "The OSI Layer 7 and the TCP/IP application layer provide identical functions.",
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "body": "The first three OSI layers describe general services that are also provided by the TCP/IP internet layer.",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "he TCP/IP internet layer provides the same function as the OSI network layer. The transport layer of both the TCP/IP and OSI models provides the same function. The TCP/IP application layer includes the same functions as OSI Layers 5, 6, and 7."
+    },
+    {
+      "id": 17,
+      "question": "What is an advantage of using standards to develop and implement protocols?",
+      "answers": [
+        {
+          "id": 1,
+          "body": "A particular protocol can only be implemented by one manufacturer.",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "body": "Products from different manufacturers can interoperate successfully.",
+          "isCorrect": true
+        },
+        {
+          "id": 3,
+          "body": "Different manufacturers are free to apply different requirements when implementing a protocol.",
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "body": "Standards provide flexibility for manufacturers to create devices that comply with unique requirements.",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "Standards-based protocols enable products from different manufacturers to interoperate successfully. Standards-based protocols enable many manufacturers to implement that protocol. If different manufacturers implement different requirements within the same protocol, then their products will not be interoperable."
+    }
+      			]
+      		},
+      		{
+      			"id": 4,
+      			"title": "Chapter 4: Network Access"
+      		},
+      		{
+      			"id": 5,
+      			"title": "Chapter 5: Ethernet"
+      		},
+      		{
+      			"id": 6,
+      			"title": "Chapter 6: Network Layer"
+      		},
+      		{
+      			"id": 7,
+      			"title": "Chapter 7: IP Addressing"
+      		},
+      		{
+      			"id": 8,
+      			"title": "Chapter 8: Subnetting IP Networks"
+      		},
+      		{
+      			"id": 9,
+      			"title": "Chapter 9: Transport Layer"
+      		},
+      		{
+      			"id": 10,
+      			"title": "Chapter 10: Application Layer"
+      		},
+      		{
+      			"id": 11,
+      			"title": "Chapter 11: Build a Small Network"
+      		}
+      	]
+     },
+     {
+		"id": 2,
+      	"title": "CCNA 2",
+      	"subtitle": "Routing & Switching Essentials",
+      	"chapters": [
+      		{
+      			"id": 1,
+      			"title": "Chapter 1: Routing Concepts"
+      		},
+      		{
+      			"id": 2,
+      			"title": "Chapter 2: Static Routing"
+      		},
+      		{
+      			"id": 3,
+      			"title": "Chapter 3: Dynamic Routing"
+      		},
+      		{
+      			"id": 4,
+      			"title": "Chapter 4: Switched Networks"
+      		},
+      		{
+      			"id": 5,
+      			"title": "Chapter 5: Switch Configuration"
+      		},
+      		{
+      			"id": 6,
+      			"title": "Chapter 6: VLANs"
+      		},
+      		{
+      			"id": 7,
+      			"title": "Chapter 7: Access Control Lists"
+      		},
+      		{
+      			"id": 8,
+      			"title": "Chapter 8: DHCP"
+      		},
+      		{
+      			"id": 9,
+      			"title": "Chapter 9: Network Address Translation for IPv4"
+      		},
+      		{
+      			"id": 10,
+      			"title": "Chapter 10: Device Discovery, Management, and Maintenance"
+      		}
+      	]
+     }
+
+	]
+}

@@ -1,0 +1,275 @@
+
+{
+    "questions": [
+    {
+    "id": 1,
+    "chapterID": 1,
+    "topicID": 1,
+    "question": "Which are some characteristics of a peer-to-peer network?(Choose more than one)",
+    "image": "",
+    "questionvalue": 1,
+    "answers": [
+      {
+        "id": 1,
+        "body": "easy generation",
+        "isCorrect": true
+      },
+      {
+        "id": 2,
+        "body": "more security",
+        "isCorrect": false
+      },
+      {
+        "id": 3,
+        "body": "no centralized",
+        "isCorrect": true
+      },
+      {
+        "id": 4,
+        "body": "minus implementation costs",
+        "isCorrect": true
+      }
+    ]
+  },
+{
+    "id": 2,
+    "chapterID": 1,
+    "topicID": 1,
+    "question": "Which device determinate the path that messages has to take through internetworks?",
+    "image": "",
+    "questionvalue": 1,
+    "answers": [
+        {
+            "id": 1,
+            "body": "Dsl modem",
+            "isCorrect": false
+        },
+        {
+            "id": 2,
+            "body": "web server",
+            "isCorrect": false
+        },
+        {
+            "id": 3,
+            "body": "router",
+            "isCorrect": true
+        },
+        {
+            "id": 4,
+            "body": "firewall",
+            "isCorrect": false
+        }
+    ]
+},
+{
+    "id": 1,
+    "chapterID": 1,
+    "topicID": 2,
+    "question": "What a kernel of an operating software does?",
+    "image": "",
+    "questionvalue": 1,
+    "answers": [
+        {
+            "id": 1,
+            "body": "It provides a user interface that lets the user able to request a specific task",
+            "isCorrect": false
+        },
+        {
+            "id": 2,
+            "body": "The kernel creates a connection between the hardware drivers with the underlying electronics of a pc",
+            "isCorrect": false
+        },
+        {
+            "id": 3,
+            "body": "The kernel provisions hardware resources to meet software requirements.",
+            "isCorrect": true
+        },
+        {
+            "id": 4,
+            "body": "Provides the first configuration of a Cisco device",
+            "isCorrect": false
+        }
+    ]
+},
+{
+    "id": 2,
+    "chapterID": 1,
+    "topicID": 2,
+    "question": "To configure a private connectivity(user ID,password and session contents) with a switch,which method we have to choose?",
+    "image": "",
+    "questionvalue": 2,
+    "answers": [
+        {
+            "id": 1,
+            "body": "HTTP",
+            "isCorrect": false
+        },
+        {
+            "id": 2,
+            "body": "DHCP",
+            "isCorrect": false
+        },
+        {
+            "id": 3,
+            "body": "Telnet",
+            "isCorrect": false
+        },
+        {
+            "id": 4,
+            "body": "SSH",
+            "isCorrect": true
+        }
+    ]
+},
+{
+    "id": 1,
+    "chapterID": 1,
+    "topicID": 3,
+    "question": "I and a friend of mine are sending data so fastly. Which metod can we use to be sure that any packets would be lost?",
+    "image": "",
+    "questionvalue": 2,
+    "answers": [
+        {
+            "id": 1,
+            "body": "encapsulation",
+            "isCorrect": false
+        },
+        {
+            "id": 2,
+            "body": "flow control",
+            "isCorrect": true
+        },
+        {
+            "id": 3,
+            "body": "response timeout",
+            "isCorrect": false
+        },
+        {
+            "id": 4,
+            "body": "access method",
+            "isCorrect": false
+        }
+    ]
+},
+{
+    "id": 2,
+    "chapterID": 1,
+    "topicID": 3,
+    "question": "How to implement a communication between all the devices on a LAN",
+    "image": "",
+    "questionvalue": 1,
+    "answers": [
+        {
+            "id": 1,
+            "body": "broadcast",
+            "isCorrect": true
+        },
+        {
+            "id": 2,
+            "body": "multicast",
+            "isCorrect": false
+        },
+        {
+            "id": 3,
+            "body": "unicast",
+            "isCorrect": false
+        },
+        {
+            "id": 4,
+            "body": "allcast",
+            "isCorrect": false
+        }
+    ]
+},
+{
+    "id": 1,
+    "chapterID": 1,
+    "topicID": 4,
+    "question": "Why physical layer protocols use frame encoding techniques?(Choose more than one answer)",
+    "image": "",
+    "questionvalue": 1,
+    "answers": [
+        {
+            "id": 1,
+            "body": "to reduce the number of collisions on the media",
+            "isCorrect": false
+        },
+        {
+            "id": 2,
+            "body": "to distinguish data bits from control bits",
+            "isCorrect": true
+        },
+        {
+            "id": 3,
+            "body": "to increase the media throughput",
+            "isCorrect": true
+        },
+        {
+            "id": 4,
+            "body": "to distinguish data from control information",
+            "isCorrect": false
+        }
+    ]
+},
+{
+    "id": 2,
+    "chapterID": 1,
+    "topicID": 4,
+    "question": "What does throughput mean?",
+    "image": "",
+    "questionvalue": 1,
+    "answers": [
+        {
+            "id": 1,
+            "body": "the guaranteed data transfer rate offered by an ISP",
+            "isCorrect": false
+        },
+        {
+            "id": 2,
+            "body": "ability of a particular medium to carry data",
+            "isCorrect": false
+        },
+        {
+            "id": 3,
+            "body": "the number of bits transferred across the media in a certain period of time",
+            "isCorrect": true
+        },
+        {
+            "id": 4,
+            "body": "the time between exchange message of two users ",
+            "isCorrect": false
+        }
+    ]
+},
+{
+    "id": 1,
+    "chapterID": 1,
+    "topicID": 5,
+    "question": "Which are the two fcators that may interfere with a copper cabling and make a signal distorsion and data corruption?",
+    "image": "",
+    "questionvalue": 1,
+    "answers": [
+        {
+            "id": 1,
+            "body": "EMI",
+            "isCorrect": true
+        },
+        {
+            "id": 2,
+            "body": "crosstalk",
+            "isCorrect": false
+        },
+        {
+            "id": 3,
+            "body": "RFI",
+            "isCorrect": true
+        },
+        {
+            "id": 4,
+            "body": "signal attenuation",
+            "isCorrect": false
+        }
+    ]
+}
+]}
+
