@@ -1,10 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Ehs-Xd-0Ft">
-    <device id="retina6_1" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="x5i-8m-Bjp">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -28,12 +26,13 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="783" y="-654"/>
+            <point key="canvasLocation" x="913" y="-403"/>
         </scene>
-        <!--Custom Main Navigation Controller-->
+        <!--Course-->
         <scene sceneID="5Td-YI-jdg">
             <objects>
                 <navigationController storyboardIdentifier="NavigationController" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Ehs-Xd-0Ft" customClass="CustomMainNavigationController" customModule="Study_Flash" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Course" image="book" catalog="system" id="w8E-rh-CFa"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="0L3-b7-PcC">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -46,7 +45,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dPF-q1-yi1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-25" y="-654"/>
+            <point key="canvasLocation" x="-112" y="-403"/>
         </scene>
         <!--CoursesDetailViewController-->
         <scene sceneID="b8d-x7-ffa">
@@ -66,14 +65,14 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="23i-tG-Gnl" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2086" y="-238"/>
+            <point key="canvasLocation" x="1733" y="-460"/>
         </scene>
         <!--Begin New Course View Controller-->
         <scene sceneID="RXb-rI-eR0">
             <objects>
                 <viewController storyboardIdentifier="BeginNewCourseViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="f5D-0r-pzb" customClass="BeginNewCourseViewController" customModule="Study_Flash" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="0y8-Qx-edK">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="M9B-ft-QlY"/>
@@ -81,15 +80,45 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tNH-4J-URw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="783" y="198"/>
+            <point key="canvasLocation" x="1677" y="326"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="3gy-X1-2Kx">
+            <objects>
+                <tabBarController storyboardIdentifier="TabBarController" id="x5i-8m-Bjp" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="0J5-dg-haL">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="Ehs-Xd-0Ft" kind="relationship" relationship="viewControllers" id="4Jz-8j-kxR"/>
+                        <segue destination="rT0-y7-RZV" kind="relationship" relationship="viewControllers" id="Tod-v9-Fja"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="v6y-3f-Hkt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1233" y="-61"/>
+        </scene>
+        <!--ProfileNavigationController-->
+        <scene sceneID="VCG-Dg-auc">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Account" referencedIdentifier="ProfileNavigationController" id="rT0-y7-RZV" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="RWQ-Hq-NJM"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0bt-HY-mQ6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-113" y="125"/>
         </scene>
         <!--StudyProfileViewController-->
         <scene sceneID="fu3-FR-qfz">
             <objects>
-                <viewControllerPlaceholder storyboardIdentifier="StudyProfileViewController" storyboardName="StudyProfile" referencedIdentifier="StudyProfileViewController" id="hRE-A1-haZ" sceneMemberID="viewController"/>
+                <viewControllerPlaceholder storyboardIdentifier="StudyProfileViewController" storyboardName="StudyProfile" referencedIdentifier="StudyProfileViewController" id="hRE-A1-haZ" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="WsX-zM-xtS"/>
+                </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tij-hQ-U83" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3025" y="-1028"/>
+            <point key="canvasLocation" x="2785" y="-473"/>
         </scene>
         <!--QuizNavigationController-->
         <scene sceneID="Le9-zJ-bu1">
@@ -97,9 +126,12 @@
                 <viewControllerPlaceholder storyboardName="Question" referencedIdentifier="QuizNavigationController" id="4Uh-Eu-qS6" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Pou-hq-9sF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3396" y="-238"/>
+            <point key="canvasLocation" x="2793" y="-403"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="book" catalog="system" width="64" height="52"/>
+    </resources>
     <inferredMetricsTieBreakers>
         <segue reference="Cpu-LM-mHe"/>
     </inferredMetricsTieBreakers>

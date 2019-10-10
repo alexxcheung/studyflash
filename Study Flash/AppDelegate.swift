@@ -33,7 +33,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let testing = true
         if testing {
             
-            stateManager.state = .FirstLaunch
+            stateManager.state = .loggedIn
             UserDefaults.standard.set(false, forKey: "isTodayCourseFinished")
             UserDefaults.standard.set(false, forKey: "isCourseSelected")
             UserDefaults.standard.synchronize()
@@ -41,7 +41,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
         
         
-        if stateManager.state == .FirstLaunch {
+        if stateManager.state == .firstLaunch {
             let layout = UICollectionViewFlowLayout()
             layout.scrollDirection = .horizontal
             let onboardingViewController = OnboardingViewController(collectionViewLayout: layout)
@@ -50,9 +50,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             
         } else {
             let story = UIStoryboard(name: "Main", bundle: Bundle.main)
-            let mainViewController = story.instantiateViewController(withIdentifier: "NavigationController")
+            let mainViewController = story.instantiateViewController(withIdentifier: "TabBarController")
             
             window?.rootViewController = mainViewController
+            window?.rootViewController?.modalPresentationStyle = .fullScreen
         }
         
         return true

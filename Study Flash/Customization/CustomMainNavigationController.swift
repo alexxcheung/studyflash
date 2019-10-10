@@ -10,18 +10,13 @@ import UIKit
 
 class CustomMainNavigationController: UINavigationController {
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         setupNavigationBarAppearance()
-        
-        print("isCourseSelected: \(isCourseSelected())")
     }
 
     
     func setupNavigationBarAppearance(){
-
         let navigationBar = self.navigationBar
         
         navigationBar.barTintColor = .white
