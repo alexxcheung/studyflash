@@ -13,12 +13,16 @@ private var _SingletonSharedInstance = StateManager()
 
 enum AppState: String {
     case firstLaunch
-    case loggedIn
     case showMainCourseList
     case courseSelected //selected a course
     case courseInProgress //Taking Quiz
     case beginNewCourse
     case courseCompleted
+}
+
+enum LogState: String {
+    case loggedIn
+    case loggedOut
 }
 
 class StateManager {
@@ -28,6 +32,8 @@ class StateManager {
     }
     
     var state: AppState = .firstLaunch
+    var logState: LogState = .loggedOut
+    
     private let defaults = UserDefaults.standard
     
     func checkState() {

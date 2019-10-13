@@ -12,12 +12,6 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-    
-//    func application(_ application: UIApplication, willFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
-//
-//        return false
-//    }
-
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
@@ -33,7 +27,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let testing = true
         if testing {
             
-            stateManager.state = .loggedIn
+            stateManager.state = .showMainCourseList
+            stateManager.logState = .loggedOut
+            
             UserDefaults.standard.set(false, forKey: "isTodayCourseFinished")
             UserDefaults.standard.set(false, forKey: "isCourseSelected")
             UserDefaults.standard.synchronize()

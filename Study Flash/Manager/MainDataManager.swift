@@ -14,10 +14,7 @@ class MainDataManager {
 //    public class var sharedInstance : MainDataManager {
 //        return _SingletonSharedInstance
 //    }
-    
-    
-    
-    
+
     func startQuiz() {
         
     }

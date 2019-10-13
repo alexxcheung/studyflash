@@ -15,18 +15,16 @@ class LoginViewController: UIViewController {
 
         // Do any additional setup after loading the view.
         
-        stateManager.state = .loggedIn
-      //check sign in or not
-      if stateManager.state == .loggedIn {
-          
-          print("true")
-          performSegue(withIdentifier: "goToProfilePage", sender: self)
-          
-      } else {
-          print("false")
-      }
+        stateManager.logState = .loggedIn
+        checkLogState()
         
-        
+    }
+    
+    fileprivate func checkLogState() {
+        //check sign in or not
+        if stateManager.logState == .loggedIn {
+            performSegue(withIdentifier: "goToProfilePage", sender: self)
+        }
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
