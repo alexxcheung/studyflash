@@ -96,10 +96,6 @@ extension BeginNewCourseViewController: UITableViewDelegate, UITableViewDataSour
 }
 
 extension BeginNewCourseViewController {
-    
-    
-    
-    
     //MARK:- BottomView
     func setupBottomView() {
         
@@ -128,7 +124,6 @@ extension BeginNewCourseViewController {
         myButton.trailingAnchor.constraint(equalTo: myBottomView.trailingAnchor).isActive = true
         myButton.bottomAnchor.constraint(equalTo: myBottomView.bottomAnchor).isActive = true
         
-        
         //Comment
         let myComment = UILabel()
         myComment.font = .systemFont(ofSize: 15)
@@ -140,8 +135,8 @@ extension BeginNewCourseViewController {
         
         //MARK:- DatePicker
         examDateTextField = TextField()
-        
         configureDatePicker()
+        
         examDateTextField.frame = CGRect(x: 0, y: 0, width: 200, height: 50)
         examDateTextField.textAlignment = .center
         examDateTextField.font = .boldSystemFont(ofSize: 16)
@@ -159,7 +154,7 @@ extension BeginNewCourseViewController {
         let totalQuestionLabel = UILabel()
         totalQuestionLabel.font = .boldSystemFont(ofSize: 18)
         totalQuestionLabel.textColor = .purpleThemeColor
-        totalQuestionLabel.text = "Total: \(courseManager.allCourses[courseManager.selectedCourseIndex!].courseProgress.completion.totalQuestion) questions"
+        totalQuestionLabel.text = "Total:                           \(courseManager.allCourses[courseManager.selectedCourseIndex!].courseProgress.completion.totalQuestion) questions"
         totalQuestionLabel.textAlignment = .center
         totalQuestionLabel.backgroundColor = .white
         
@@ -224,12 +219,6 @@ extension BeginNewCourseViewController {
         UserDefaults.standard.synchronize()
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let destination = segue.destination as? CourseDetailWithScheduleViewController  {
-            //pass the course name
-        }
-    }
-    
     func modifyCommentText() -> NSMutableAttributedString {
         let normalText  = "In order to create a personalized and efficient study plan for you, please specify the date of your exam: "
         let normalString = NSMutableAttributedString(string:normalText)
@@ -248,8 +237,9 @@ extension BeginNewCourseViewController {
     
 }
 
+//MARK: --Textfield Configuration
 extension BeginNewCourseViewController: UITextFieldDelegate {
-    
+
     func configureDatePicker() {
         //Formate Date
         datePicker.datePickerMode = .date

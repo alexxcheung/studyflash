@@ -21,13 +21,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window = UIWindow()
         window?.makeKeyAndVisible()
         
-        stateManager.checkState()
+        stateManager.updateState()
 
-        //for overall testing
-        let testing = true
+        //for configuring testing
+        let testing = false
         if testing {
             
-            stateManager.state = .showMainCourseList
+            stateManager.state = .firstLaunch
             stateManager.logState = .loggedOut
             
             UserDefaults.standard.set(false, forKey: "isTodayCourseFinished")
@@ -35,7 +35,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             UserDefaults.standard.synchronize()
             
         }
-        
         
         if stateManager.state == .firstLaunch {
             let layout = UICollectionViewFlowLayout()

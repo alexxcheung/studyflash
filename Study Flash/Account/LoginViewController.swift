@@ -28,13 +28,5 @@ class LoginViewController: UIViewController {
             performSegue(withIdentifier: "goToProfilePage", sender: self)
         }
     }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-
-        
-    }
-    
-
-    
 
 }

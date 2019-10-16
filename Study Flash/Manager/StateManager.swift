@@ -27,36 +27,34 @@ enum LogState: String {
 
 class StateManager {
     
+    var state: AppState!
+    var logState: LogState = .loggedOut
+    
     public class var sharedInstance: StateManager {
         return _SingletonSharedInstance
     }
     
-    var state: AppState = .firstLaunch
-    var logState: LogState = .loggedOut
-    
     private let defaults = UserDefaults.standard
     
-    func checkState() {
-        
+    private func checkState() -> AppState {
         if isFirstLaunch() {
-            self.state = .firstLaunch
+            return .firstLaunch
+        } else {
             
-        } else if isOnboardingFinish() {
-            self.state = .showMainCourseList
-            
-            if isCourseSelected() {
-                self.state = .courseSelected
-                
-                //temp:
+            if isBeginNewCourse() {
+                return .beginNewCourse
+            } else if isCourseSelected() {
+                courseManager.selectedCourseIndex = 0
+                return .courseSelected
             }
             
-            
+            return .showMainCourseList
         }
-        
-        if isBeginNewCourse() {
-            self.state = .beginNewCourse
-        }
-        
+    }
+    
+    func updateState() {
+        self.state = self.checkState()
+        print(self.state!)
     }
     
     func isFirstLaunch() -> Bool {
@@ -79,8 +77,4 @@ class StateManager {
     func isBeginNewCourse() -> Bool {
         return defaults.bool(forKey: "isBeginNewCourse") == true ? true : false
     }
-    
-    
-    
-    
 }

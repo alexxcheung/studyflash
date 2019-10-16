@@ -45,7 +45,6 @@
 		118CC31422B2D2FA00CD3B97 /* cisco.json in Resources */ = {isa = PBXBuildFile; fileRef = 118CC31322B2D2FA00CD3B97 /* cisco.json */; };
 		118CC31622B2D41400CD3B97 /* CourseData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 118CC31522B2D41400CD3B97 /* CourseData.swift */; };
 		118CC31A22B2E9FC00CD3B97 /* testing.json in Resources */ = {isa = PBXBuildFile; fileRef = 118CC31922B2E9FC00CD3B97 /* testing.json */; };
-		80BEDF1622A176E4005B189A /* MainDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80BEDF1522A176E4005B189A /* MainDataManager.swift */; };
 		80BEDF1822A17781005B189A /* QuizManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80BEDF1722A17781005B189A /* QuizManager.swift */; };
 		B6812EA42281DC290059ED27 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6812EA32281DC290059ED27 /* AppDelegate.swift */; };
 		B6812EA62281DC290059ED27 /* QuestionsTopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6812EA52281DC290059ED27 /* QuestionsTopViewController.swift */; };
@@ -110,7 +109,6 @@
 		118CC31322B2D2FA00CD3B97 /* cisco.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = cisco.json; sourceTree = "<group>"; };
 		118CC31522B2D41400CD3B97 /* CourseData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseData.swift; sourceTree = "<group>"; };
 		118CC31922B2E9FC00CD3B97 /* testing.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = testing.json; sourceTree = "<group>"; };
-		80BEDF1522A176E4005B189A /* MainDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainDataManager.swift; sourceTree = "<group>"; };
 		80BEDF1722A17781005B189A /* QuizManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizManager.swift; sourceTree = "<group>"; };
 		B6812EA02281DC290059ED27 /* Study Flash.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Study Flash.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B6812EA32281DC290059ED27 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -279,7 +277,6 @@
 		117441AE22A40FE300C960E3 /* Manager */ = {
 			isa = PBXGroup;
 			children = (
-				80BEDF1522A176E4005B189A /* MainDataManager.swift */,
 				80BEDF1722A17781005B189A /* QuizManager.swift */,
 				117441A722A2D1BD00C960E3 /* CourseManager.swift */,
 				B8F51B0B2302D2FD000C5119 /* StateManager.swift */,
@@ -447,7 +444,6 @@
 				CC95E7BC22B2E34E0082EA60 /* CourseDetailCollectionViewCell.swift in Sources */,
 				1124A99B229D7A410048946E /* CoursesTableViewFooterCell.swift in Sources */,
 				1124A94A2296E3FA0048946E /* Question.swift in Sources */,
-				80BEDF1622A176E4005B189A /* MainDataManager.swift in Sources */,
 				1124A9662296E5A80048946E /* Courses.swift in Sources */,
 				1124A98422974D950048946E /* OnboardingViewController.swift in Sources */,
 				1124A98A229821FA0048946E /* OnboardingPage3.swift in Sources */,

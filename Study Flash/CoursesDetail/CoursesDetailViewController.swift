@@ -21,12 +21,14 @@ class CoursesDetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // temp use
+        guard courseManager.selectedCourseIndex != nil else {return}
         setupBottomView()
         setupTableView()
         setupNavigationBar()
         
         
-        //update number of question left
+        // update number of question left
     courseManager.allCourses[courseManager.selectedCourseIndex!].courseProgress.completion.totalIncompletedQuestion = courseManager.allCourses[courseManager.selectedCourseIndex!].courseProgress.completion.questionLeft()
     
         
