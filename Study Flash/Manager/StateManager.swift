@@ -12,7 +12,7 @@ let stateManager = StateManager.sharedInstance
 private var _SingletonSharedInstance = StateManager()
 
 enum AppState: String {
-    case FirstLaunch
+    case firstLaunch
     case showMainCourseList
     case courseSelected //selected a course
     case courseInProgress //Taking Quiz
@@ -20,28 +20,41 @@ enum AppState: String {
     case courseCompleted
 }
 
+enum LogState: String {
+    case loggedIn
+    case loggedOut
+}
+
 class StateManager {
+    
+    var state: AppState!
+    var logState: LogState = .loggedOut
     
     public class var sharedInstance: StateManager {
         return _SingletonSharedInstance
     }
     
-    var state: AppState = .FirstLaunch
     private let defaults = UserDefaults.standard
     
-    func checkState() {
-        
+    private func checkState() -> AppState {
         if isFirstLaunch() {
-            self.state = .FirstLaunch
-        } else if isOnboardingFinish() {
-            self.state = .showMainCourseList
+            return .firstLaunch
+        } else {
             
-            if isCourseSelected() {
-                self.state = .courseSelected
-                
-                //temp:
+            if isBeginNewCourse() {
+                return .beginNewCourse
+            } else if isCourseSelected() {
+                courseManager.selectedCourseIndex = 0
+                return .courseSelected
             }
+            
+            return .showMainCourseList
         }
+    }
+    
+    func updateState() {
+        self.state = self.checkState()
+        print(self.state!)
     }
     
     func isFirstLaunch() -> Bool {
@@ -64,8 +77,4 @@ class StateManager {
     func isBeginNewCourse() -> Bool {
         return defaults.bool(forKey: "isBeginNewCourse") == true ? true : false
     }
-    
-    
-    
-    
 }

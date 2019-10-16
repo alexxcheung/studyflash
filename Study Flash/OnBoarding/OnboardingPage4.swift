@@ -17,7 +17,6 @@ class OnboardingPage4: UICollectionViewCell {
         
         backgroundColor = .white
         
-        
         let imageOfOnboarding = UIImageView(image: UIImage(named: "OnboardingImage4"))
         imageOfOnboarding.setOnboardingImage()
         
