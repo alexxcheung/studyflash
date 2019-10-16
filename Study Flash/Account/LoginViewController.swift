@@ -18,6 +18,8 @@ class LoginViewController: UIViewController {
         stateManager.logState = .loggedIn
         checkLogState()
         
+        self.navigationItem.title = "Profile"
+        
     }
     
     fileprivate func checkLogState() {

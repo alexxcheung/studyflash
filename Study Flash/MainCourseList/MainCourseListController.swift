@@ -20,51 +20,39 @@ class MainCourseListController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // ----- setUp View
         setupNavigationBar()
         setUpTableView()
-        
-        // ----- setUp Data
         setupCourseManager()
-
-        // ----- State Management
         stateManager.checkState()
-        
+        navigateAccordingToState()
+    }
+    
+    func navigateAccordingToState() {
+        // -- When Course Selected
         if stateManager.state == .courseSelected {
-
-            //Need to fetch Data from JSON
             courseManager.selectedCourseIndex = UserDefaults.standard.integer(forKey: "lastSelectedCourseId") - 1
-            print(courseManager.selectedCourseIndex)
-
-            if courseManager.selectedCourseIndex >= 0 {
-                performSegue(withIdentifier: "backToCourseDetail", sender: self)
-                
-                //temp: (exist until courseManager -> persistent)
-                courseManager.allCourses[courseManager.selectedCourseIndex].courseProgress.state = .todayNotCompleted
-
-            }
+            //safeguard
+            guard courseManager.selectedCourseIndex >= 0 else {return}
+            
+            performSegue(withIdentifier: "backToCourseDetail", sender: self)
+            courseManager.allCourses[courseManager.selectedCourseIndex].courseProgress.state = .todayNotCompleted
+            
         }
-        
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-//        updateNavigationBar()
         updateCourseList()
         
         stateManager.checkState()
         
         if stateManager.state == .beginNewCourse {
-            //Return to false
             UserDefaults.standard.set(false, forKey: "isBeginNewCourse")
             UserDefaults.standard.synchronize()
             
-            print("New Course Started!")
-            
             performSegue(withIdentifier: "backToCourseDetail", sender: self)
         }
-        
     }
 }
 

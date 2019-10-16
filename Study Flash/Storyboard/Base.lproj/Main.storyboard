@@ -20,7 +20,7 @@
                     <navigationItem key="navigationItem" id="sUO-bZ-HWn"/>
                     <connections>
                         <segue destination="Saa-DF-CUx" kind="show" identifier="showCourseDetails" id="Cpu-LM-mHe"/>
-                        <segue destination="f5D-0r-pzb" kind="presentation" identifier="startNewCourse" id="WGV-aw-uJh"/>
+                        <segue destination="f5D-0r-pzb" kind="presentation" identifier="startNewCourse" modalPresentationStyle="fullScreen" id="WGV-aw-uJh"/>
                         <segue destination="Saa-DF-CUx" kind="show" identifier="backToCourseDetail" animates="NO" id="udT-is-NxN"/>
                     </connections>
                 </viewController>
@@ -65,22 +65,23 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="23i-tG-Gnl" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1733" y="-460"/>
+            <point key="canvasLocation" x="1832" y="-473"/>
         </scene>
         <!--Begin New Course View Controller-->
         <scene sceneID="RXb-rI-eR0">
             <objects>
                 <viewController storyboardIdentifier="BeginNewCourseViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="f5D-0r-pzb" customClass="BeginNewCourseViewController" customModule="Study_Flash" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="0y8-Qx-edK">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="M9B-ft-QlY"/>
                     </view>
+                    <navigationItem key="navigationItem" id="bId-Pb-B40"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tNH-4J-URw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1677" y="326"/>
+            <point key="canvasLocation" x="912" y="416"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="3gy-X1-2Kx">
@@ -133,6 +134,6 @@
         <image name="book" catalog="system" width="64" height="52"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Cpu-LM-mHe"/>
+        <segue reference="udT-is-NxN"/>
     </inferredMetricsTieBreakers>
 </document>

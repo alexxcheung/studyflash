@@ -252,8 +252,6 @@ extension BeginNewCourseViewController: UITextFieldDelegate {
     
     func configureDatePicker() {
         //Formate Date
-//        let datePicker = UIDatePicker()
-        
         datePicker.datePickerMode = .date
         datePicker.backgroundColor = .white
         datePicker.locale = Locale(identifier: "en_GB")
@@ -261,8 +259,6 @@ extension BeginNewCourseViewController: UITextFieldDelegate {
         datePicker.tintColor = .purpleThemeColor
         
         //ToolBar
-//        let toolbar = UIToolbar()
-        
         let doneButton = UIBarButtonItem(title: "Select", style: .plain, target: self, action: #selector(doneDatePicker))
         let spaceButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonItem.SystemItem.flexibleSpace, target: nil, action: nil)
         let cancelButton = UIBarButtonItem(title: "Cancel", style: .plain, target: self, action: #selector(cancelDatePicker))

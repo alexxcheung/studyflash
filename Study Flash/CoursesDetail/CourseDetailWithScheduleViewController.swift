@@ -381,7 +381,7 @@ extension CourseDetailWithScheduleViewController {
     
     @objc private func handleContinueStudySession(sender: UIButton!) {
         sender.flash()
-        
+
         if !isTodayCourseFinished {
             confirmSelectedCourse()
             performSegue(withIdentifier: "startQuiz", sender: self)

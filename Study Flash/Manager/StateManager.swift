@@ -49,7 +49,14 @@ class StateManager {
                 
                 //temp:
             }
+            
+            
         }
+        
+        if isBeginNewCourse() {
+            self.state = .beginNewCourse
+        }
+        
     }
     
     func isFirstLaunch() -> Bool {
