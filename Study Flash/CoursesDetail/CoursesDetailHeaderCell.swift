@@ -22,7 +22,7 @@ class CoursesDetailHeaderCell: UITableViewCell {
         super.awakeFromNib()
         
         self.backgroundColor = .white
-        courseCompletionRateLabel.textColor = .purpleThemeColor
+        courseCompletionRateLabel.textColor = .primaryThemeColor
 
         setupDetailDescription(numberOfQuestion: numberOfQuestion)
     }

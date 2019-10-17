@@ -77,7 +77,7 @@ class QuestionsTopViewController: UIViewController {
             
             questionsViewController?.tableView.allowsSelection = false
             bottomButton.setTitle("Continue", for: .normal)
-            bottomButton.backgroundColor = .purpleThemeColor
+            bottomButton.backgroundColor = .primaryThemeColor
             questionState = .Checked
         }
         

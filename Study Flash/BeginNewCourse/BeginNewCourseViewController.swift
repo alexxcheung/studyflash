@@ -20,7 +20,7 @@ class BeginNewCourseViewController: UIViewController {
     
     var userSetTheDate = false {
         didSet {
-            myButton.backgroundColor = .purpleThemeColor
+            myButton.backgroundColor = .primaryThemeColor
         }
     }
     
@@ -142,10 +142,10 @@ extension BeginNewCourseViewController {
         examDateTextField.font = .boldSystemFont(ofSize: 16)
         
         examDateTextField.layer.borderWidth = 0.5
-        examDateTextField.layer.borderColor = UIColor.purpleThemeColor.cgColor
+        examDateTextField.layer.borderColor = UIColor.primaryThemeColor.cgColor
         examDateTextField.layer.cornerRadius = 5
         examDateTextField.text = "Select Exam Date"
-        examDateTextField.textColor = .purpleThemeColor
+        examDateTextField.textColor = .primaryThemeColor
         
         examDateTextField.delegate = self
         examDateTextField.inputView = datePicker
@@ -153,7 +153,7 @@ extension BeginNewCourseViewController {
         
         let totalQuestionLabel = UILabel()
         totalQuestionLabel.font = .boldSystemFont(ofSize: 18)
-        totalQuestionLabel.textColor = .purpleThemeColor
+        totalQuestionLabel.textColor = .primaryThemeColor
         totalQuestionLabel.text = "Total:                           \(courseManager.allCourses[courseManager.selectedCourseIndex!].courseProgress.completion.totalQuestion) questions"
         totalQuestionLabel.textAlignment = .center
         totalQuestionLabel.backgroundColor = .white
@@ -246,7 +246,7 @@ extension BeginNewCourseViewController: UITextFieldDelegate {
         datePicker.backgroundColor = .white
         datePicker.locale = Locale(identifier: "en_GB")
         datePicker.minimumDate = Date()
-        datePicker.tintColor = .purpleThemeColor
+        datePicker.tintColor = .primaryThemeColor
         
         //ToolBar
         let doneButton = UIBarButtonItem(title: "Select", style: .plain, target: self, action: #selector(doneDatePicker))
@@ -256,7 +256,7 @@ extension BeginNewCourseViewController: UITextFieldDelegate {
         
         toolbar.sizeToFit()
         toolbar.backgroundColor = .white
-        toolbar.tintColor = .purpleThemeColor
+        toolbar.tintColor = .primaryThemeColor
     }
 
     @objc func doneDatePicker(){

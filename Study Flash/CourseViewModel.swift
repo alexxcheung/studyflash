@@ -25,7 +25,7 @@ struct CourseViewModel {
         
         if course.courseProgress.state == .notStart {
             self.courseState = "New Course!"
-            self.courseStateTextColor = .purpleThemeColor
+            self.courseStateTextColor = .primaryThemeColor
         } else {
             self.courseState = String(courseCompletion) + "% Completed"
             self.courseStateTextColor = .darkGray

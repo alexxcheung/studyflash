@@ -20,7 +20,7 @@ class BottomNormalButton: UIButton {
     }
     
     private func configure() {
-        self.backgroundColor = UIColor.purpleThemeColor
+        self.backgroundColor = UIColor.primaryThemeColor
         self.tintColor = .white
         self.titleLabel?.lineBreakMode = .byWordWrapping
         self.titleLabel?.textAlignment = .center

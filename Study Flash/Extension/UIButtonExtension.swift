@@ -10,8 +10,6 @@ import UIKit
 
 
 extension UIButton {
-    
-    
     var height: CGFloat {
         if detectDeviceModel() == 0 {
             return 60
@@ -27,8 +25,6 @@ extension UIButton {
             return 20
         }
     }
-    
-    
     
     func setupButton() {
         

@@ -75,7 +75,7 @@ class OnboardingViewController: UICollectionViewController, UICollectionViewDele
         pageControl.currentPage = 0
         pageControl.tintColor = .black
         pageControl.pageIndicatorTintColor = .lightGray
-        pageControl.currentPageIndicatorTintColor = .purpleThemeColor
+        pageControl.currentPageIndicatorTintColor = .primaryThemeColor
         
         self.view.addSubview(pageControl)
     }
