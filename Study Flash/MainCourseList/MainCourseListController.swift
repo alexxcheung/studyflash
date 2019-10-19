@@ -19,7 +19,7 @@ class MainCourseListController: UIViewController {
         configueTableView()
         setupCourseManager()
         stateManager.updateState()
-        navigateAccordingToState_ViewDidLoad()
+        navigateAccordingToState_FirstLoad()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -28,13 +28,15 @@ class MainCourseListController: UIViewController {
         updateCourseList()
         stateManager.updateState()
         navigateAccordingToState_ViewWillAppear()
+        
+        self.tabBarController?.tabBar.isHidden = true
     }
     
-    func navigateAccordingToState_ViewDidLoad() {
+    func navigateAccordingToState_FirstLoad() {
         if stateManager.state == .courseSelected {
-            courseManager.selectedCourseIndex = UserDefaults.standard.integer(forKey: "lastSelectedCourseId") - 1
+            courseManager.selectedCourseIndex = UserDefaults.standard.integer(forKey: "lastSelectedCourseId")
             //safeguard
-//            guard courseManager.selectedCourseIndex >= 0 else {return}
+            guard courseManager.selectedCourseIndex >= 0 else {return}
             
             performSegue(withIdentifier: "backToCourseDetail", sender: self)
             courseManager.allCourses[courseManager.selectedCourseIndex].courseProgress.state = .todayNotCompleted

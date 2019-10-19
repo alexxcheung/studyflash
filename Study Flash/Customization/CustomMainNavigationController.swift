@@ -9,13 +9,11 @@
 import UIKit
 
 class CustomMainNavigationController: UINavigationController {
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupNavigationBarAppearance()
     }
 
-    
     func setupNavigationBarAppearance(){
         let navigationBar = self.navigationBar
         
@@ -26,11 +24,5 @@ class CustomMainNavigationController: UINavigationController {
         navigationBar.setBackgroundImage(UIImage(), for: .default)
         navigationBar.shadowImage = UIImage()
         navigationBar.titleTextAttributes = [NSAttributedString.Key.font: UIFont(name: "Helvetica-Bold", size: 20)!, NSAttributedString.Key.foregroundColor: UIColor.gray]
-        
-    }
-    
-    //check isCourseSelected
-    private func isCourseSelected() -> Bool {
-        return UserDefaults.standard.bool(forKey: "isCourseSelected")
     }
 }

@@ -40,14 +40,12 @@ class StateManager {
         if isFirstLaunch() {
             return .firstLaunch
         } else {
-            
             if isBeginNewCourse() {
                 return .beginNewCourse
             } else if isCourseSelected() {
                 courseManager.selectedCourseIndex = 0
                 return .courseSelected
             }
-            
             return .showMainCourseList
         }
     }

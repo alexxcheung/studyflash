@@ -23,13 +23,13 @@ class CoursesDetailViewController: UIViewController {
         
         // temp use
         guard courseManager.selectedCourseIndex != nil else {return}
+        
         setupBottomView()
         setupTableView()
         setupNavigationBar()
         
-        
         // update number of question left
-    courseManager.allCourses[courseManager.selectedCourseIndex!].courseProgress.completion.totalIncompletedQuestion = courseManager.allCourses[courseManager.selectedCourseIndex!].courseProgress.completion.questionLeft()
+courseManager.allCourses[courseManager.selectedCourseIndex!].courseProgress.completion.totalIncompletedQuestion = courseManager.allCourses[courseManager.selectedCourseIndex!].courseProgress.completion.questionLeft()
     
         
     }
@@ -184,7 +184,6 @@ extension CoursesDetailViewController {
         UserDefaults.standard.set(true, forKey: "isCourseSelected")
         UserDefaults.standard.set(courseManager.selectedCourse?.courseId, forKey: "lastSelectedCourseId")
         UserDefaults.standard.synchronize()
-        
     }
     
     func modifyCommentText() -> NSMutableAttributedString {
