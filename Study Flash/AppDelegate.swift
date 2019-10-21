@@ -33,7 +33,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             UserDefaults.standard.set(false, forKey: "isTodayCourseFinished")
             UserDefaults.standard.set(false, forKey: "isCourseSelected")
             UserDefaults.standard.synchronize()
-            
         }
         
         if stateManager.state == .firstLaunch {
