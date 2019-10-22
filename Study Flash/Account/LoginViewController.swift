@@ -12,14 +12,11 @@ class LoginViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
         
         stateManager.logState = .loggedIn
         checkLogState()
         
         self.navigationItem.title = "Profile"
-        
     }
     
     fileprivate func checkLogState() {
