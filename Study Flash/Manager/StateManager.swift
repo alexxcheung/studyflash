@@ -36,6 +36,11 @@ class StateManager {
     
     private let defaults = UserDefaults.standard
     
+    func updateState() {
+        self.state = self.checkState()
+        print(self.state!)
+    }
+    
     private func checkState() -> AppState {
         if isFirstLaunch() {
             return .firstLaunch
@@ -49,13 +54,8 @@ class StateManager {
             return .showMainCourseList
         }
     }
-    
-    func updateState() {
-        self.state = self.checkState()
-        print(self.state!)
-    }
-    
-    func isFirstLaunch() -> Bool {
+
+    private func isFirstLaunch() -> Bool {
         if let _ = defaults.string(forKey: "isFirstLaunch") {
             return false
         } else {
@@ -64,15 +64,19 @@ class StateManager {
         }
     }
     
-    func isOnboardingFinish() -> Bool {
+    private func isOnboardingFinish() -> Bool {
         return defaults.bool(forKey: "isOnboardingFinish") == true ? true : false
     }
     
-    func isCourseSelected() -> Bool {
+    private func isCourseSelected() -> Bool {
         return defaults.bool(forKey: "isCourseSelected") == true ? true : false
     }
     
-    func isBeginNewCourse() -> Bool {
+    private func isBeginNewCourse() -> Bool {
         return defaults.bool(forKey: "isBeginNewCourse") == true ? true : false
+    }
+    
+    private func isLoggedIn() -> Bool {
+        return defaults.bool(forKey: "isLoggedIn") == true ? true : false
     }
 }

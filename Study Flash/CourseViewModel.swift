@@ -16,7 +16,7 @@ struct CourseViewModel {
     let courseStateTextColor: UIColor
     let courseCompletion: Double
     
-    //Dependency Injection
+    // Dependency Injection
     init(course: Course) {
         self.courseTitle = course.courseTitle
         
