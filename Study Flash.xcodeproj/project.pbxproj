@@ -57,6 +57,7 @@
 		B81BABA42306AAF0000363F8 /* UserDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = B81BABA32306AAF0000363F8 /* UserDefault.swift */; };
 		B8345C362360292F008F7CF4 /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8345C352360292F008F7CF4 /* Account.swift */; };
 		B8345C38236029B4008F7CF4 /* Validation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8345C37236029B4008F7CF4 /* Validation.swift */; };
+		B86BA8CA236A8967009A490A /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B86BA8C9236A8967009A490A /* SignUpViewController.swift */; };
 		B8E037D123407D7B00990691 /* CustomTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8E037D023407D7B00990691 /* CustomTabBarViewController.swift */; };
 		B8E037D32340870600990691 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8E037D22340870600990691 /* ProfileViewController.swift */; };
 		B8E037D523408DB000990691 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8E037D423408DB000990691 /* LoginViewController.swift */; };
@@ -125,6 +126,7 @@
 		B81BABA32306AAF0000363F8 /* UserDefault.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefault.swift; sourceTree = "<group>"; };
 		B8345C352360292F008F7CF4 /* Account.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
 		B8345C37236029B4008F7CF4 /* Validation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validation.swift; sourceTree = "<group>"; };
+		B86BA8C9236A8967009A490A /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		B8E037D023407D7B00990691 /* CustomTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBarViewController.swift; sourceTree = "<group>"; };
 		B8E037D22340870600990691 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		B8E037D423408DB000990691 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -347,6 +349,7 @@
 			children = (
 				B8E037D423408DB000990691 /* LoginViewController.swift */,
 				B8E037D22340870600990691 /* ProfileViewController.swift */,
+				B86BA8C9236A8967009A490A /* SignUpViewController.swift */,
 			);
 			path = Account;
 			sourceTree = "<group>";
@@ -478,6 +481,7 @@
 				CC95E7B622B2A4640082EA60 /* TKRadarChart.swift in Sources */,
 				117441A422A034E000C960E3 /* UINavigationBarExtension.swift in Sources */,
 				B81BABA223054D82000363F8 /* CourseViewModel.swift in Sources */,
+				B86BA8CA236A8967009A490A /* SignUpViewController.swift in Sources */,
 				117441B622A6B5D600C960E3 /* MainCourseListController.swift in Sources */,
 				117441A822A2D1BD00C960E3 /* CourseManager.swift in Sources */,
 				B8F51B0C2302D2FD000C5119 /* StateManager.swift in Sources */,

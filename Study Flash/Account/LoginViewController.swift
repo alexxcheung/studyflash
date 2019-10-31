@@ -13,13 +13,14 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        stateManager.logState = .loggedIn
+        stateManager.logState = .loggedOut
         checkLogState()
         
         self.navigationItem.title = "Profile"
+        
     }
     
-    fileprivate func checkLogState() {
+    private func checkLogState() {
         // Check sign in or not
         if stateManager.logState == .loggedIn {
             performSegue(withIdentifier: "goToProfilePage", sender: self)

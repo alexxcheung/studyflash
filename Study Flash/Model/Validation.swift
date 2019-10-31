@@ -39,7 +39,6 @@ struct Validations {
         }
     }
 
-    // MARK: - Private
     private static func isValid(input: String, regEx: String, predicateFormat: String) -> Bool {
         return NSPredicate(format: predicateFormat, regEx).evaluate(with: input)
     }

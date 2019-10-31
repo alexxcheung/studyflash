@@ -38,7 +38,6 @@ class CoursesTableViewCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
     
     }
-   
 }
 
 

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -28,8 +28,8 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dT8-J2-luC">
-                                <rect key="frame" x="16" y="234.5" width="74" height="20.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dT8-J2-luC">
+                                <rect key="frame" x="16" y="234.5" width="41" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -66,7 +66,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KYk-fo-XQ9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1081.1594202898552" y="0.6696428571428571"/>
+            <point key="canvasLocation" x="1080" y="1"/>
         </scene>
         <!--Account View Controller-->
         <scene sceneID="D54-bW-RJq">
@@ -95,7 +95,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Logout"/>
                                 <connections>
-                                    <action selector="tapOn_LogoutButton:" destination="TkE-1h-lDM" eventType="touchUpInside" id="LoF-xT-SSF"/>
+                                    <action selector="tappedOn_LogoutButton:" destination="TkE-1h-lDM" eventType="touchUpInside" id="LoF-xT-SSF"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -111,18 +111,11 @@
         <!--SignUp View Controller-->
         <scene sceneID="WSu-pT-ctd">
             <objects>
-                <viewController id="K6q-7Y-0wT" userLabel="SignUp View Controller" sceneMemberID="viewController">
+                <viewController id="K6q-7Y-0wT" userLabel="SignUp View Controller" customClass="SignUpViewController" customModule="Study_Flash" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="6AH-Oi-DzU">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="SignUp Page" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UUk-k0-ckh">
-                                <rect key="frame" x="147" y="65" width="99" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="inB-1h-TTf">
                                 <rect key="frame" x="41" y="148" width="78.5" height="20.5"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -135,6 +128,9 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="endEditingUsername:" destination="K6q-7Y-0wT" eventType="editingDidEnd" id="jEH-IY-rey"/>
+                                </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5uz-9F-QE8">
                                 <rect key="frame" x="41" y="245" width="74" height="20.5"/>
@@ -148,6 +144,9 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="endEditPassword:" destination="K6q-7Y-0wT" eventType="editingDidEnd" id="UQD-Tg-ib7"/>
+                                </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Confirmed Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nxR-AB-GQd">
                                 <rect key="frame" x="41" y="342" width="159" height="21"/>
@@ -174,17 +173,36 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="endEditingEmail:" destination="K6q-7Y-0wT" eventType="editingDidEnd" id="Qaq-SS-6FK"/>
+                                </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UQJ-12-S5b">
-                                <rect key="frame" x="180" y="590" width="55" height="30"/>
+                                <rect key="frame" x="183" y="590" width="49" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Confirm"/>
+                                <state key="normal" title="Submit"/>
+                                <connections>
+                                    <action selector="tappedOnSubmitButton:" destination="K6q-7Y-0wT" eventType="touchUpInside" id="eat-o2-bvQ"/>
+                                </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Create Your Account!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UUk-k0-ckh">
+                                <rect key="frame" x="126" y="64" width="163" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="s8n-u0-7GH"/>
                     </view>
                     <navigationItem key="navigationItem" id="nak-LN-L08"/>
+                    <connections>
+                        <outlet property="confirmPasswordTextField" destination="R9x-jy-FQl" id="0Qp-C9-Cfd"/>
+                        <outlet property="emailTextField" destination="3hf-iZ-J4x" id="uzk-m7-WRA"/>
+                        <outlet property="passwordTextField" destination="HII-Ol-pI7" id="Ihd-z7-DwY"/>
+                        <outlet property="usernameTextField" destination="oEt-2b-jwV" id="TxG-PU-FGD"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HSZ-K0-XSw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -212,6 +230,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="person" catalog="system" width="64" height="60"/>
+        <image name="person" catalog="system" width="64" height="58"/>
     </resources>
 </document>

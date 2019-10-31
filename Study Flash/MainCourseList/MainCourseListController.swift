@@ -29,7 +29,8 @@ class MainCourseListController: UIViewController {
         stateManager.updateState()
         navigateAccordingToState_ViewWillAppear()
         
-        self.tabBarController?.tabBar.isHidden = true
+        //unhide tabBar
+        self.tabBarController?.tabBar.isHidden = false
     }
     
     func navigateAccordingToState_FirstLoad() {

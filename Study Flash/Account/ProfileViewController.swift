@@ -11,7 +11,7 @@ import UIKit
 class AccountViewController: UIViewController {
 
 
-    @IBAction func tapOn_LogoutButton(_ sender: Any) {
+    @IBAction func tappedOn_LogoutButton(_ sender: Any) {
         stateManager.logState = .loggedOut
         navigationController?.popViewController(animated: false)
     }
