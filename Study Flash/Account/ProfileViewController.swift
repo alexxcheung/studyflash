@@ -10,12 +10,6 @@ import UIKit
 
 class AccountViewController: UIViewController {
 
-
-    @IBAction func tappedOn_LogoutButton(_ sender: Any) {
-        stateManager.logState = .loggedOut
-        navigationController?.popViewController(animated: false)
-    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -24,7 +18,10 @@ class AccountViewController: UIViewController {
         self.navigationItem.setHidesBackButton(true, animated:true)
     }
     
-    
+    @IBAction func tappedOn_LogoutButton(_ sender: Any) {
+        stateManager.logState = .loggedOut
+        navigationController?.popViewController(animated: false)
+    }
     
 
     

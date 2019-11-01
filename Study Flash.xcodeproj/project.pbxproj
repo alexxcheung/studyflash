@@ -58,6 +58,9 @@
 		B8345C362360292F008F7CF4 /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8345C352360292F008F7CF4 /* Account.swift */; };
 		B8345C38236029B4008F7CF4 /* Validation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8345C37236029B4008F7CF4 /* Validation.swift */; };
 		B86BA8CA236A8967009A490A /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B86BA8C9236A8967009A490A /* SignUpViewController.swift */; };
+		B86BA8CD236ABABC009A490A /* UserInfoModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B86BA8CB236ABABB009A490A /* UserInfoModel.xcdatamodeld */; };
+		B86BA8F2236ABE35009A490A /* PersistenceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B86BA8F1236ABE35009A490A /* PersistenceManager.swift */; };
+		B86BA8F4236B30A3009A490A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B86BA8F3236B30A3009A490A /* ViewController.swift */; };
 		B8E037D123407D7B00990691 /* CustomTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8E037D023407D7B00990691 /* CustomTabBarViewController.swift */; };
 		B8E037D32340870600990691 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8E037D22340870600990691 /* ProfileViewController.swift */; };
 		B8E037D523408DB000990691 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8E037D423408DB000990691 /* LoginViewController.swift */; };
@@ -127,6 +130,9 @@
 		B8345C352360292F008F7CF4 /* Account.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
 		B8345C37236029B4008F7CF4 /* Validation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validation.swift; sourceTree = "<group>"; };
 		B86BA8C9236A8967009A490A /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		B86BA8CC236ABABC009A490A /* UserInfoModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = UserInfoModel.xcdatamodel; sourceTree = "<group>"; };
+		B86BA8F1236ABE35009A490A /* PersistenceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceManager.swift; sourceTree = "<group>"; };
+		B86BA8F3236B30A3009A490A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		B8E037D023407D7B00990691 /* CustomTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBarViewController.swift; sourceTree = "<group>"; };
 		B8E037D22340870600990691 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		B8E037D423408DB000990691 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -190,6 +196,8 @@
 				117441AC22A31A4F00C960E3 /* StudyProfile.storyboard */,
 				B6812EA72281DC290059ED27 /* Question.storyboard */,
 				1174419F229ED6F600C960E3 /* Result.storyboard */,
+				B86BA8CB236ABABB009A490A /* UserInfoModel.xcdatamodeld */,
+				B86BA8F3236B30A3009A490A /* ViewController.swift */,
 			);
 			path = Storyboard;
 			sourceTree = "<group>";
@@ -288,6 +296,7 @@
 				80BEDF1722A17781005B189A /* QuizManager.swift */,
 				117441A722A2D1BD00C960E3 /* CourseManager.swift */,
 				B8F51B0B2302D2FD000C5119 /* StateManager.swift */,
+				B86BA8F1236ABE35009A490A /* PersistenceManager.swift */,
 			);
 			path = Manager;
 			sourceTree = "<group>";
@@ -477,7 +486,10 @@
 				117441AA22A2F9E800C960E3 /* StudyProfileViewController.swift in Sources */,
 				1174419B229ECDC400C960E3 /* CustomUITextfield.swift in Sources */,
 				1124A988229821D50048946E /* OnboardingPage2.swift in Sources */,
+				B86BA8CD236ABABC009A490A /* UserInfoModel.xcdatamodeld in Sources */,
 				1124A991229D6A4E0048946E /* BeginNewCourseViewController.swift in Sources */,
+				B86BA8F4236B30A3009A490A /* ViewController.swift in Sources */,
+				B86BA8F2236ABE35009A490A /* PersistenceManager.swift in Sources */,
 				CC95E7B622B2A4640082EA60 /* TKRadarChart.swift in Sources */,
 				117441A422A034E000C960E3 /* UINavigationBarExtension.swift in Sources */,
 				B81BABA223054D82000363F8 /* CourseViewModel.swift in Sources */,
@@ -650,7 +662,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3M89YG2JX8;
 				INFOPLIST_FILE = "Study Flash/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -669,7 +681,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3M89YG2JX8;
 				INFOPLIST_FILE = "Study Flash/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -703,6 +715,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		B86BA8CB236ABABB009A490A /* UserInfoModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				B86BA8CC236ABABC009A490A /* UserInfoModel.xcdatamodel */,
+			);
+			currentVersion = B86BA8CC236ABABC009A490A /* UserInfoModel.xcdatamodel */;
+			path = UserInfoModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = B6812E982281DC290059ED27 /* Project object */;
 }

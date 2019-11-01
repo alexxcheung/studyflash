@@ -27,5 +27,10 @@ class LoginViewController: UIViewController {
         }
     }
     
+    @IBAction func tappedOnSignUpButton(_ sender: Any) {
+        let vc = SignUpViewController(persistenceManager: PersistenceManager.shared)
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+    
 
 }

@@ -10,13 +10,32 @@ import UIKit
 
 class SignUpViewController: UIViewController {
 
-    // MARK- : Outlets
+    let persistenceManager: PersistenceManager
+//    persistenceManager = PersistenceManager.shared
+    
+    init(persistenceManager: PersistenceManager) {
+        self.persistenceManager = persistenceManager
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+//    required init?(coder aDecoder: NSCoder) {
+//       super.init(coder: aDecoder)
+//    }
+
+    
+
+    
+    // MARK: - Outlets
     @IBOutlet weak var usernameTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var confirmPasswordTextField: UITextField!
     @IBOutlet weak var emailTextField: UITextField!
     
-    // MARK- : Outlet Action
+    // MARK: - Outlet Action
     @IBAction func endEditingUsername(_ sender: Any) {
         username = usernameTextField.text
     }
@@ -43,6 +62,8 @@ class SignUpViewController: UIViewController {
         password = passwordTextField.text
     }
     
+    //MARK: - variable
+    
     var username: String?
     var email: Email?
     var password: String?
@@ -51,7 +72,16 @@ class SignUpViewController: UIViewController {
         super.viewDidLoad()
         setUpUI()
         
+        persistenceManager.save()
+        
     }
+    
+    func createUser() {
+//        let user = User(context: persistenceManager.context)
+        
+    }
+    
+    //MARK: - Functions
     
     func setUpUI() {
         passwordTextField.isSecureTextEntry = true
@@ -107,6 +137,8 @@ class SignUpViewController: UIViewController {
     }
     
     @IBAction func tappedOnSubmitButton(_ sender: Any) {
+        // Force End Editing to check
+        emailTextField.endEditing(true)
         
         print(username, email, password)
 
