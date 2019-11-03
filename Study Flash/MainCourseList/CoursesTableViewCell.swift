@@ -27,7 +27,7 @@ class CoursesTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         //orginal formatting
-        courseTitle.textColor = .purpleThemeColor
+        courseTitle.textColor = .primaryThemeColor
         
         grayLine.backgroundColor = .gray
 
@@ -38,7 +38,6 @@ class CoursesTableViewCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
     
     }
-   
 }
 
 

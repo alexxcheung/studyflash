@@ -74,7 +74,7 @@ class StudyProfileViewController: UIViewController, TKRadarChartDelegate, TKRada
     
     
     func colorOfLineForRadarChart(_ radarChart: TKRadarChart) -> UIColor {
-        return UIColor.purpleThemeColor
+        return UIColor.primaryThemeColor
     }
     
     func colorOfFillStepForRadarChart(_ radarChart: TKRadarChart, step: Int) -> UIColor {
@@ -145,7 +145,7 @@ extension StudyProfileViewController {
     }
     
     func setupButton() {
-        myButton.backgroundColor = UIColor.pinkThemeColor
+        myButton.backgroundColor = UIColor.secondaryThemeColor
         myButton.frame = .zero
         myButton.tintColor = .white
         myButton.layer.cornerRadius = 8

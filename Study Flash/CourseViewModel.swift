@@ -16,7 +16,7 @@ struct CourseViewModel {
     let courseStateTextColor: UIColor
     let courseCompletion: Double
     
-    //Dependency Injection
+    // Dependency Injection
     init(course: Course) {
         self.courseTitle = course.courseTitle
         
@@ -25,7 +25,7 @@ struct CourseViewModel {
         
         if course.courseProgress.state == .notStart {
             self.courseState = "New Course!"
-            self.courseStateTextColor = .purpleThemeColor
+            self.courseStateTextColor = .primaryThemeColor
         } else {
             self.courseState = String(courseCompletion) + "% Completed"
             self.courseStateTextColor = .darkGray

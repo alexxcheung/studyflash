@@ -24,7 +24,7 @@ class QuestionTableViewCell: UITableViewCell {
         
         checkBox.image = selected ? UIImage(named: "Selected.png") : UIImage(named: "NotSelectedGray.png")
         
-        self.backgroundColor = selected ? .purpleThemeColor : .clear
+        self.backgroundColor = selected ? .primaryThemeColor : .clear
         self.questionLabel.textColor = selected ? .white : .black
     }
     
@@ -46,7 +46,7 @@ class QuestionTableViewCell: UITableViewCell {
             checkBox.image = UIImage(named: "NotSelectedGray.png")
             
         case .Selected:
-            self.backgroundColor = .purpleThemeColor
+            self.backgroundColor = .primaryThemeColor
             self.questionLabel.textColor = .white
             checkBox.image = UIImage(named: "Selected.png")
             

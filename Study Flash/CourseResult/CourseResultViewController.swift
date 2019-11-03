@@ -42,7 +42,7 @@ class CourseResultViewController: UIViewController {
 extension CourseResultViewController {
     
     func setupBottomButton() {
-        myButton.backgroundColor = UIColor.purpleThemeColor
+        myButton.backgroundColor = UIColor.primaryThemeColor
         myButton.tintColor = .white
         myButton.setTitle("End Study Session", for: .normal)
         myButton.titleLabel?.lineBreakMode = .byWordWrapping

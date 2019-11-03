@@ -23,13 +23,13 @@ class CoursesDetailViewController: UIViewController {
         
         // temp use
         guard courseManager.selectedCourseIndex != nil else {return}
+        
         setupBottomView()
         setupTableView()
         setupNavigationBar()
         
-        
         // update number of question left
-    courseManager.allCourses[courseManager.selectedCourseIndex!].courseProgress.completion.totalIncompletedQuestion = courseManager.allCourses[courseManager.selectedCourseIndex!].courseProgress.completion.questionLeft()
+courseManager.allCourses[courseManager.selectedCourseIndex!].courseProgress.completion.totalIncompletedQuestion = courseManager.allCourses[courseManager.selectedCourseIndex!].courseProgress.completion.questionLeft()
     
         
     }
@@ -123,7 +123,7 @@ extension CoursesDetailViewController {
         let myButton = BottomNormalButton()
         
         if courseManager.allCourses[courseManager.selectedCourseIndex!].courseProgress.state == .todayNotCompleted {
-            myButton.backgroundColor = UIColor.purpleThemeColor
+            myButton.backgroundColor = UIColor.primaryThemeColor
             let titleName = (courseManager.allCourses[courseManager.selectedCourseIndex!].courseProgress.completion.calculateCompletionRate() == 0) ? "Start New Study Session" : "Continue Study Session"
             myButton.setTitle(titleName, for: .normal)
 
@@ -184,7 +184,6 @@ extension CoursesDetailViewController {
         UserDefaults.standard.set(true, forKey: "isCourseSelected")
         UserDefaults.standard.set(courseManager.selectedCourse?.courseId, forKey: "lastSelectedCourseId")
         UserDefaults.standard.synchronize()
-        
     }
     
     func modifyCommentText() -> NSMutableAttributedString {
@@ -234,7 +233,7 @@ extension CoursesDetailViewController {
         helpButton.setImage(UIImage(named: "ChartButton.png"), for: .normal)
         helpButton.addTarget(self, action: #selector(studyProfileButton_clicked), for: .touchUpInside)
         helpButton.frame = CGRect(x: 0, y: 0, width: 20, height: 20)
-        helpButton.tintColor = .purpleThemeColor
+        helpButton.tintColor = .primaryThemeColor
         helpButton.contentMode = .scaleAspectFill
 
         let rightHelpButton = UIBarButtonItem(customView: helpButton)

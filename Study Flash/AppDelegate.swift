@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreData
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -33,7 +34,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             UserDefaults.standard.set(false, forKey: "isTodayCourseFinished")
             UserDefaults.standard.set(false, forKey: "isCourseSelected")
             UserDefaults.standard.synchronize()
-            
         }
         
         if stateManager.state == .firstLaunch {
@@ -77,17 +77,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
        
     }
-
-
     
-    //Restortion
-//    func application(_ application: UIApplication, shouldSaveApplicationState coder: NSCoder) -> Bool {
-//        return true
-//    }
-//
-//    func application(_ application: UIApplication, shouldRestoreApplicationState coder: NSCoder) -> Bool {
-//        return true
-//    }
-
+    
+    
 }
 

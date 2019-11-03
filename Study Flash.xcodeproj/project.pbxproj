@@ -14,7 +14,7 @@
 		1124A95F2296E5730048946E /* CustomMainNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1124A95E2296E5730048946E /* CustomMainNavigationController.swift */; };
 		1124A9632296E5770048946E /* UIButtonExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1124A9602296E5770048946E /* UIButtonExtension.swift */; };
 		1124A9642296E5770048946E /* SomeExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1124A9612296E5770048946E /* SomeExtension.swift */; };
-		1124A9652296E5770048946E /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1124A9622296E5770048946E /* UIColorExtension.swift */; };
+		1124A9652296E5770048946E /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1124A9622296E5770048946E /* ColorExtension.swift */; };
 		1124A9662296E5A80048946E /* Courses.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1124A9482296E3480048946E /* Courses.swift */; };
 		1124A9732296E7630048946E /* CoursesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1124A9702296E7630048946E /* CoursesTableViewCell.swift */; };
 		1124A97C2296E8A10048946E /* CoursesTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1124A97B2296E8A10048946E /* CoursesTableViewCell.xib */; };
@@ -55,7 +55,15 @@
 		B6812EE8228C47940059ED27 /* QuestionsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6812EE7228C47940059ED27 /* QuestionsTableViewController.swift */; };
 		B81BABA223054D82000363F8 /* CourseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B81BABA123054D82000363F8 /* CourseViewModel.swift */; };
 		B81BABA42306AAF0000363F8 /* UserDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = B81BABA32306AAF0000363F8 /* UserDefault.swift */; };
-		B8E037D123407D7B00990691 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8E037D023407D7B00990691 /* TabBarViewController.swift */; };
+		B8345C362360292F008F7CF4 /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8345C352360292F008F7CF4 /* Account.swift */; };
+		B8345C38236029B4008F7CF4 /* Validation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8345C37236029B4008F7CF4 /* Validation.swift */; };
+		B86BA8CA236A8967009A490A /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B86BA8C9236A8967009A490A /* SignUpViewController.swift */; };
+		B86BA8CD236ABABC009A490A /* UserInfoModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B86BA8CB236ABABB009A490A /* UserInfoModel.xcdatamodeld */; };
+		B86BA8F2236ABE35009A490A /* PersistenceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B86BA8F1236ABE35009A490A /* PersistenceManager.swift */; };
+		B86BA8F4236B30A3009A490A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B86BA8F3236B30A3009A490A /* ViewController.swift */; };
+		B86BA8FC236ED2D2009A490A /* User+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = B86BA8FA236ED2D2009A490A /* User+CoreDataClass.swift */; };
+		B86BA8FD236ED2D2009A490A /* User+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = B86BA8FB236ED2D2009A490A /* User+CoreDataProperties.swift */; };
+		B8E037D123407D7B00990691 /* CustomTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8E037D023407D7B00990691 /* CustomTabBarViewController.swift */; };
 		B8E037D32340870600990691 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8E037D22340870600990691 /* ProfileViewController.swift */; };
 		B8E037D523408DB000990691 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8E037D423408DB000990691 /* LoginViewController.swift */; };
 		B8E037D72340900E00990691 /* Account.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B8E037D62340900E00990691 /* Account.storyboard */; };
@@ -79,7 +87,7 @@
 		1124A95E2296E5730048946E /* CustomMainNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomMainNavigationController.swift; sourceTree = "<group>"; };
 		1124A9602296E5770048946E /* UIButtonExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButtonExtension.swift; sourceTree = "<group>"; };
 		1124A9612296E5770048946E /* SomeExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SomeExtension.swift; sourceTree = "<group>"; };
-		1124A9622296E5770048946E /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
+		1124A9622296E5770048946E /* ColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
 		1124A9702296E7630048946E /* CoursesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoursesTableViewCell.swift; sourceTree = "<group>"; };
 		1124A97B2296E8A10048946E /* CoursesTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CoursesTableViewCell.xib; sourceTree = "<group>"; };
 		1124A9802296E8E20048946E /* CoursesDetailHeaderCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CoursesDetailHeaderCell.xib; sourceTree = "<group>"; };
@@ -121,7 +129,15 @@
 		B6812EE7228C47940059ED27 /* QuestionsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionsTableViewController.swift; sourceTree = "<group>"; };
 		B81BABA123054D82000363F8 /* CourseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseViewModel.swift; sourceTree = "<group>"; };
 		B81BABA32306AAF0000363F8 /* UserDefault.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefault.swift; sourceTree = "<group>"; };
-		B8E037D023407D7B00990691 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
+		B8345C352360292F008F7CF4 /* Account.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
+		B8345C37236029B4008F7CF4 /* Validation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validation.swift; sourceTree = "<group>"; };
+		B86BA8C9236A8967009A490A /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		B86BA8CC236ABABC009A490A /* UserInfoModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = UserInfoModel.xcdatamodel; sourceTree = "<group>"; };
+		B86BA8F1236ABE35009A490A /* PersistenceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceManager.swift; sourceTree = "<group>"; };
+		B86BA8F3236B30A3009A490A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		B86BA8FA236ED2D2009A490A /* User+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "User+CoreDataClass.swift"; sourceTree = "<group>"; };
+		B86BA8FB236ED2D2009A490A /* User+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "User+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		B8E037D023407D7B00990691 /* CustomTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBarViewController.swift; sourceTree = "<group>"; };
 		B8E037D22340870600990691 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		B8E037D423408DB000990691 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		B8E037D62340900E00990691 /* Account.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Account.storyboard; sourceTree = "<group>"; };
@@ -155,6 +171,8 @@
 				1124A9472296E3480048946E /* Question.swift */,
 				CC95E7B522B2A4640082EA60 /* TKRadarChart.swift */,
 				CC95E7BD22B2E3D20082EA60 /* CourseDetailCalendarModel.swift */,
+				B8345C352360292F008F7CF4 /* Account.swift */,
+				B8345C37236029B4008F7CF4 /* Validation.swift */,
 				CC8A839C22B285FC003BD494 /* Algorithm.swift */,
 				B81BABA32306AAF0000363F8 /* UserDefault.swift */,
 			);
@@ -182,6 +200,7 @@
 				117441AC22A31A4F00C960E3 /* StudyProfile.storyboard */,
 				B6812EA72281DC290059ED27 /* Question.storyboard */,
 				1174419F229ED6F600C960E3 /* Result.storyboard */,
+				B86BA8F3236B30A3009A490A /* ViewController.swift */,
 			);
 			path = Storyboard;
 			sourceTree = "<group>";
@@ -214,7 +233,7 @@
 		1124A9782296E7910048946E /* Customization */ = {
 			isa = PBXGroup;
 			children = (
-				B8E037D023407D7B00990691 /* TabBarViewController.swift */,
+				B8E037D023407D7B00990691 /* CustomTabBarViewController.swift */,
 				1124A95E2296E5730048946E /* CustomMainNavigationController.swift */,
 				117441AF22A5C80100C960E3 /* CustomQuestionNavigationController.swift */,
 				1174419A229ECDC400C960E3 /* CustomUITextfield.swift */,
@@ -226,9 +245,9 @@
 		1124A9792296E79B0048946E /* Extension */ = {
 			isa = PBXGroup;
 			children = (
+				1124A9622296E5770048946E /* ColorExtension.swift */,
 				1124A9612296E5770048946E /* SomeExtension.swift */,
 				1124A9602296E5770048946E /* UIButtonExtension.swift */,
-				1124A9622296E5770048946E /* UIColorExtension.swift */,
 				117441A322A034DF00C960E3 /* UINavigationBarExtension.swift */,
 				B8E77EE223017CF1006F2372 /* UIDevice.swift */,
 			);
@@ -280,6 +299,7 @@
 				80BEDF1722A17781005B189A /* QuizManager.swift */,
 				117441A722A2D1BD00C960E3 /* CourseManager.swift */,
 				B8F51B0B2302D2FD000C5119 /* StateManager.swift */,
+				B86BA8F1236ABE35009A490A /* PersistenceManager.swift */,
 			);
 			path = Manager;
 			sourceTree = "<group>";
@@ -306,6 +326,7 @@
 			children = (
 				B6812EA32281DC290059ED27 /* AppDelegate.swift */,
 				1124A94B2296E44D0048946E /* Storyboard */,
+				B86BA8F5236ED159009A490A /* CoreData */,
 				117441AE22A40FE300C960E3 /* Manager */,
 				B81BAB9F23054D50000363F8 /* ViewModel */,
 				B8E037D823409E8300990691 /* Account */,
@@ -336,10 +357,21 @@
 			name = ViewModel;
 			sourceTree = "<group>";
 		};
+		B86BA8F5236ED159009A490A /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				B86BA8CB236ABABB009A490A /* UserInfoModel.xcdatamodeld */,
+				B86BA8FA236ED2D2009A490A /* User+CoreDataClass.swift */,
+				B86BA8FB236ED2D2009A490A /* User+CoreDataProperties.swift */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
 		B8E037D823409E8300990691 /* Account */ = {
 			isa = PBXGroup;
 			children = (
 				B8E037D423408DB000990691 /* LoginViewController.swift */,
+				B86BA8C9236A8967009A490A /* SignUpViewController.swift */,
 				B8E037D22340870600990691 /* ProfileViewController.swift */,
 			);
 			path = Account;
@@ -437,6 +469,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1124A9642296E5770048946E /* SomeExtension.swift in Sources */,
+				B86BA8FC236ED2D2009A490A /* User+CoreDataClass.swift in Sources */,
 				CC95E7BE22B2E3D20082EA60 /* CourseDetailCalendarModel.swift in Sources */,
 				1124A95C2296E56F0048946E /* CoursesDetailHeaderCell.swift in Sources */,
 				B8E77EE323017CF1006F2372 /* UIDevice.swift in Sources */,
@@ -448,16 +481,18 @@
 				1124A98422974D950048946E /* OnboardingViewController.swift in Sources */,
 				1124A98A229821FA0048946E /* OnboardingPage3.swift in Sources */,
 				118CC31622B2D41400CD3B97 /* CourseData.swift in Sources */,
-				B8E037D123407D7B00990691 /* TabBarViewController.swift in Sources */,
+				B8E037D123407D7B00990691 /* CustomTabBarViewController.swift in Sources */,
 				B6812EE6228C476C0059ED27 /* QuestionTableViewCell.swift in Sources */,
 				B6812EA62281DC290059ED27 /* QuestionsTopViewController.swift in Sources */,
 				B8E037D32340870600990691 /* ProfileViewController.swift in Sources */,
 				1174419D229ED60F00C960E3 /* CourseResultViewController.swift in Sources */,
-				1124A9652296E5770048946E /* UIColorExtension.swift in Sources */,
+				1124A9652296E5770048946E /* ColorExtension.swift in Sources */,
 				CC8A839D22B285FD003BD494 /* Algorithm.swift in Sources */,
 				B6812EA42281DC290059ED27 /* AppDelegate.swift in Sources */,
 				1124A98C2298220C0048946E /* OnboardingPage4.swift in Sources */,
 				1124A9732296E7630048946E /* CoursesTableViewCell.swift in Sources */,
+				B8345C38236029B4008F7CF4 /* Validation.swift in Sources */,
+				B8345C362360292F008F7CF4 /* Account.swift in Sources */,
 				1124A986229753FF0048946E /* OnboardingPage1.swift in Sources */,
 				1124A997229D6CDA0048946E /* BeginNewCourseHeaderCell.swift in Sources */,
 				117441B322A5D27600C960E3 /* QuestionHeaderTableViewCell.swift in Sources */,
@@ -466,13 +501,18 @@
 				117441AA22A2F9E800C960E3 /* StudyProfileViewController.swift in Sources */,
 				1174419B229ECDC400C960E3 /* CustomUITextfield.swift in Sources */,
 				1124A988229821D50048946E /* OnboardingPage2.swift in Sources */,
+				B86BA8CD236ABABC009A490A /* UserInfoModel.xcdatamodeld in Sources */,
 				1124A991229D6A4E0048946E /* BeginNewCourseViewController.swift in Sources */,
+				B86BA8F4236B30A3009A490A /* ViewController.swift in Sources */,
+				B86BA8F2236ABE35009A490A /* PersistenceManager.swift in Sources */,
 				CC95E7B622B2A4640082EA60 /* TKRadarChart.swift in Sources */,
 				117441A422A034E000C960E3 /* UINavigationBarExtension.swift in Sources */,
 				B81BABA223054D82000363F8 /* CourseViewModel.swift in Sources */,
+				B86BA8CA236A8967009A490A /* SignUpViewController.swift in Sources */,
 				117441B622A6B5D600C960E3 /* MainCourseListController.swift in Sources */,
 				117441A822A2D1BD00C960E3 /* CourseManager.swift in Sources */,
 				B8F51B0C2302D2FD000C5119 /* StateManager.swift in Sources */,
+				B86BA8FD236ED2D2009A490A /* User+CoreDataProperties.swift in Sources */,
 				B81BABA42306AAF0000363F8 /* UserDefault.swift in Sources */,
 				80BEDF1822A17781005B189A /* QuizManager.swift in Sources */,
 				B8E037D523408DB000990691 /* LoginViewController.swift in Sources */,
@@ -691,6 +731,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		B86BA8CB236ABABB009A490A /* UserInfoModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				B86BA8CC236ABABC009A490A /* UserInfoModel.xcdatamodel */,
+			);
+			currentVersion = B86BA8CC236ABABC009A490A /* UserInfoModel.xcdatamodel */;
+			path = UserInfoModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = B6812E982281DC290059ED27 /* Project object */;
 }
