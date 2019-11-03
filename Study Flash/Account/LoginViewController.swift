@@ -28,9 +28,15 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func tappedOnSignUpButton(_ sender: Any) {
-        let vc = SignUpViewController(persistenceManager: PersistenceManager.shared)
-        self.navigationController?.pushViewController(vc, animated: true)
+        guard let vc = storyboard?.instantiateViewController(identifier: "SignUpViewController",
+                                                             creator: {coder in
+            return SignUpViewController(coder: coder, persistenceManager: PersistenceManager.shared)
+        }) else {
+                fatalError("Failed to load SignupView Controller from storyboard")
+        }
+        self.present(vc, animated: true, completion: nil)
     }
+
     
 
 }

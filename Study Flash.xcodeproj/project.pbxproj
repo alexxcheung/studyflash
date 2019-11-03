@@ -61,6 +61,8 @@
 		B86BA8CD236ABABC009A490A /* UserInfoModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B86BA8CB236ABABB009A490A /* UserInfoModel.xcdatamodeld */; };
 		B86BA8F2236ABE35009A490A /* PersistenceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B86BA8F1236ABE35009A490A /* PersistenceManager.swift */; };
 		B86BA8F4236B30A3009A490A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B86BA8F3236B30A3009A490A /* ViewController.swift */; };
+		B86BA8FC236ED2D2009A490A /* User+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = B86BA8FA236ED2D2009A490A /* User+CoreDataClass.swift */; };
+		B86BA8FD236ED2D2009A490A /* User+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = B86BA8FB236ED2D2009A490A /* User+CoreDataProperties.swift */; };
 		B8E037D123407D7B00990691 /* CustomTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8E037D023407D7B00990691 /* CustomTabBarViewController.swift */; };
 		B8E037D32340870600990691 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8E037D22340870600990691 /* ProfileViewController.swift */; };
 		B8E037D523408DB000990691 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8E037D423408DB000990691 /* LoginViewController.swift */; };
@@ -133,6 +135,8 @@
 		B86BA8CC236ABABC009A490A /* UserInfoModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = UserInfoModel.xcdatamodel; sourceTree = "<group>"; };
 		B86BA8F1236ABE35009A490A /* PersistenceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceManager.swift; sourceTree = "<group>"; };
 		B86BA8F3236B30A3009A490A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		B86BA8FA236ED2D2009A490A /* User+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "User+CoreDataClass.swift"; sourceTree = "<group>"; };
+		B86BA8FB236ED2D2009A490A /* User+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "User+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		B8E037D023407D7B00990691 /* CustomTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBarViewController.swift; sourceTree = "<group>"; };
 		B8E037D22340870600990691 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		B8E037D423408DB000990691 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -196,7 +200,6 @@
 				117441AC22A31A4F00C960E3 /* StudyProfile.storyboard */,
 				B6812EA72281DC290059ED27 /* Question.storyboard */,
 				1174419F229ED6F600C960E3 /* Result.storyboard */,
-				B86BA8CB236ABABB009A490A /* UserInfoModel.xcdatamodeld */,
 				B86BA8F3236B30A3009A490A /* ViewController.swift */,
 			);
 			path = Storyboard;
@@ -323,6 +326,7 @@
 			children = (
 				B6812EA32281DC290059ED27 /* AppDelegate.swift */,
 				1124A94B2296E44D0048946E /* Storyboard */,
+				B86BA8F5236ED159009A490A /* CoreData */,
 				117441AE22A40FE300C960E3 /* Manager */,
 				B81BAB9F23054D50000363F8 /* ViewModel */,
 				B8E037D823409E8300990691 /* Account */,
@@ -353,12 +357,22 @@
 			name = ViewModel;
 			sourceTree = "<group>";
 		};
+		B86BA8F5236ED159009A490A /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				B86BA8CB236ABABB009A490A /* UserInfoModel.xcdatamodeld */,
+				B86BA8FA236ED2D2009A490A /* User+CoreDataClass.swift */,
+				B86BA8FB236ED2D2009A490A /* User+CoreDataProperties.swift */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
 		B8E037D823409E8300990691 /* Account */ = {
 			isa = PBXGroup;
 			children = (
 				B8E037D423408DB000990691 /* LoginViewController.swift */,
-				B8E037D22340870600990691 /* ProfileViewController.swift */,
 				B86BA8C9236A8967009A490A /* SignUpViewController.swift */,
+				B8E037D22340870600990691 /* ProfileViewController.swift */,
 			);
 			path = Account;
 			sourceTree = "<group>";
@@ -455,6 +469,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1124A9642296E5770048946E /* SomeExtension.swift in Sources */,
+				B86BA8FC236ED2D2009A490A /* User+CoreDataClass.swift in Sources */,
 				CC95E7BE22B2E3D20082EA60 /* CourseDetailCalendarModel.swift in Sources */,
 				1124A95C2296E56F0048946E /* CoursesDetailHeaderCell.swift in Sources */,
 				B8E77EE323017CF1006F2372 /* UIDevice.swift in Sources */,
@@ -497,6 +512,7 @@
 				117441B622A6B5D600C960E3 /* MainCourseListController.swift in Sources */,
 				117441A822A2D1BD00C960E3 /* CourseManager.swift in Sources */,
 				B8F51B0C2302D2FD000C5119 /* StateManager.swift in Sources */,
+				B86BA8FD236ED2D2009A490A /* User+CoreDataProperties.swift in Sources */,
 				B81BABA42306AAF0000363F8 /* UserDefault.swift in Sources */,
 				80BEDF1822A17781005B189A /* QuizManager.swift in Sources */,
 				B8E037D523408DB000990691 /* LoginViewController.swift in Sources */,
@@ -662,7 +678,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3M89YG2JX8;
 				INFOPLIST_FILE = "Study Flash/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -681,7 +697,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3M89YG2JX8;
 				INFOPLIST_FILE = "Study Flash/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

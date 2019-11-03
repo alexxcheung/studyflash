@@ -2,12 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:Study Flash/User+CoreDataClass.swift">
-   </FileRef>
-   <FileRef
-      location = "group:Study Flash/User+CoreDataProperties.swift">
-   </FileRef>
-   <FileRef
       location = "group:Study Flash.xcodeproj">
    </FileRef>
    <FileRef

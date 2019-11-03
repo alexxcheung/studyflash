@@ -9,26 +9,21 @@
 import UIKit
 
 class SignUpViewController: UIViewController {
-
+    
     let persistenceManager: PersistenceManager
-//    persistenceManager = PersistenceManager.shared
     
-    init(persistenceManager: PersistenceManager) {
+    
+    // MARK: -Dependency Injection - Init
+    init?(coder: NSCoder, persistenceManager: PersistenceManager) {
         self.persistenceManager = persistenceManager
-        super.init(nibName: nil, bundle: nil)
+        super.init(coder: coder)
     }
-    
+
     required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
+        fatalError("you must with a Persistance Maanager")
     }
     
-//    required init?(coder aDecoder: NSCoder) {
-//       super.init(coder: aDecoder)
-//    }
 
-    
-
-    
     // MARK: - Outlets
     @IBOutlet weak var usernameTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
@@ -44,9 +39,7 @@ class SignUpViewController: UIViewController {
         guard let email = emailTextField.text else {return}
         do {
             try self.email = Email(email)
-            
             print("Valid Email")
-            print(self.email)
         }   catch EvaluateError.isEmpty {
             print("it is empty")
         }   catch EvaluateError.isNotValidEmailLength {
@@ -67,17 +60,61 @@ class SignUpViewController: UIViewController {
     var username: String?
     var email: Email?
     var password: String?
+    
+    var users = [User]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpUI()
         
-        persistenceManager.save()
+//        createUser()
+        getUser()
+        
+        
         
     }
     
+    //MARK: - CoreData
+    
+    func printUsers() {
+        users.forEach({print($0.username)})
+    }
+    
     func createUser() {
-//        let user = User(context: persistenceManager.context)
+        let user = User(context: persistenceManager.context)
+        user.username = "david"
+        user.email = "123@gmail.com"
+        user.password = "123"
+        
+        persistenceManager.save()
+    }
+    
+    func getUser() {
+        let users = persistenceManager.fetch(User.self)
+        self.users = users
+        
+        printUsers()
+        
+        let deadline = DispatchTime.now() + .seconds(5)
+        DispatchQueue.main.asyncAfter(deadline: deadline, execute: deleteUser)
+
+    }
+    
+    func updateUser() {
+        let firstUser = users.first!
+        
+        firstUser.username += " - Updated"
+        
+        persistenceManager.save()
+        printUsers()
+        
+    }
+    
+    func deleteUser() {
+        let firstUser = users.first!
+        persistenceManager.delete(firstUser)
+        
+        printUsers()
         
     }
     
@@ -116,7 +153,6 @@ class SignUpViewController: UIViewController {
         } else {
             return false
         }
-        
     }
     
     func createAccount() {
@@ -125,9 +161,9 @@ class SignUpViewController: UIViewController {
             let email = email,
             let password = password else {return}
         
-        let user = User(name: username, email: email, password: password)
+//        let user = User(name: username, email: email, password: password)
         
-        print(user)
+//        print(user)
 
         sendDataToDatabase()
     }

@@ -21,10 +21,10 @@ struct Email {
     }
 }
 
-struct User {
-    let name: String
-    let email: Email
-    let password: String
-}
+//struct User {
+//    let name: String
+//    let email: Email
+//    let password: String
+//}
 
 

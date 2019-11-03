@@ -48,7 +48,6 @@
                                 <state key="normal" title="Sign up"/>
                                 <connections>
                                     <action selector="tappedOnSignUpButton:" destination="iqA-nj-tUZ" eventType="touchUpInside" id="U8j-3Q-WQA"/>
-                                    <segue destination="K6q-7Y-0wT" kind="presentation" id="XbU-GE-rU3"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fO4-7q-EaX">
@@ -113,9 +112,9 @@
         <!--SignUp View Controller-->
         <scene sceneID="WSu-pT-ctd">
             <objects>
-                <viewController id="K6q-7Y-0wT" userLabel="SignUp View Controller" customClass="SignUpViewController" customModule="Study_Flash" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SignUpViewController" id="K6q-7Y-0wT" userLabel="SignUp View Controller" customClass="SignUpViewController" customModule="Study_Flash" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="6AH-Oi-DzU">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="inB-1h-TTf">
