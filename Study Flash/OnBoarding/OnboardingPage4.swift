@@ -17,7 +17,6 @@ class OnboardingPage4: UICollectionViewCell {
         
         backgroundColor = .white
         
-        
         let imageOfOnboarding = UIImageView(image: UIImage(named: "OnboardingImage4"))
         imageOfOnboarding.setOnboardingImage()
         
@@ -41,7 +40,7 @@ class OnboardingPage4: UICollectionViewCell {
 
         
         let startButton = UIButton()
-        startButton.backgroundColor = UIColor.purpleThemeColor
+        startButton.backgroundColor = UIColor.primaryThemeColor
         startButton.frame = .zero
         startButton.tintColor = .white
         startButton.setTitle("Let's start", for: .normal)

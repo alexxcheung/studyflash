@@ -75,7 +75,7 @@ class OnboardingViewController: UICollectionViewController, UICollectionViewDele
         pageControl.currentPage = 0
         pageControl.tintColor = .black
         pageControl.pageIndicatorTintColor = .lightGray
-        pageControl.currentPageIndicatorTintColor = .purpleThemeColor
+        pageControl.currentPageIndicatorTintColor = .primaryThemeColor
         
         self.view.addSubview(pageControl)
     }
@@ -93,15 +93,15 @@ class OnboardingViewController: UICollectionViewController, UICollectionViewDele
     func presentNewViewController(myData dataobject: AnyObject) {
         
         let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-        let mainViewController = storyBoard.instantiateViewController(withIdentifier: "NavigationController")
+        let mainViewController = storyBoard.instantiateViewController(withIdentifier: "TabBarController")
         mainViewController.modalTransitionStyle = .crossDissolve
+        mainViewController.modalPresentationStyle = .fullScreen
         
         UserDefaults.standard.set(true, forKey: "isOnboardingFinish")
         UserDefaults.standard.synchronize()
         
         self.present(mainViewController, animated: true, completion: nil)
     }
-    
 }
 
 protocol CustomCollectionViewCellDelegate {

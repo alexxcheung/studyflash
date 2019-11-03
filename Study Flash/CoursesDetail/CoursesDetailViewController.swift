@@ -21,14 +21,16 @@ class CoursesDetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // temp use
+        guard courseManager.selectedCourseIndex != nil else {return}
         
         setupBottomView()
         setupTableView()
         setupNavigationBar()
         
-        //update number of question left
-//        courseManager.allCourses[courseManager.selectedCourseIndex!].courseProgress.completion.totalIncompletedQuestion = courseManager.allCourses[courseManager.selectedCourseIndex!].courseProgress.completion.questionLeft()
-        
+        // update number of question left
+courseManager.allCourses[courseManager.selectedCourseIndex!].courseProgress.completion.totalIncompletedQuestion = courseManager.allCourses[courseManager.selectedCourseIndex!].courseProgress.completion.questionLeft()
+    
         
     }
     
@@ -100,8 +102,9 @@ extension CoursesDetailViewController: UITableViewDelegate, UITableViewDataSourc
 }
 
 extension CoursesDetailViewController {
-    
     private func setupBottomView() {
+        //hide tabbar
+        self.tabBarController?.tabBar.isHidden = true
         
         myBottomView = UIView(frame: CGRect(x: 0, y: 0, width: screenSize.width, height: 150))
         myBottomView.backgroundColor = .white
@@ -120,7 +123,7 @@ extension CoursesDetailViewController {
         let myButton = BottomNormalButton()
         
         if courseManager.allCourses[courseManager.selectedCourseIndex!].courseProgress.state == .todayNotCompleted {
-            myButton.backgroundColor = UIColor.purpleThemeColor
+            myButton.backgroundColor = UIColor.primaryThemeColor
             let titleName = (courseManager.allCourses[courseManager.selectedCourseIndex!].courseProgress.completion.calculateCompletionRate() == 0) ? "Start New Study Session" : "Continue Study Session"
             myButton.setTitle(titleName, for: .normal)
 
@@ -181,13 +184,13 @@ extension CoursesDetailViewController {
         UserDefaults.standard.set(true, forKey: "isCourseSelected")
         UserDefaults.standard.set(courseManager.selectedCourse?.courseId, forKey: "lastSelectedCourseId")
         UserDefaults.standard.synchronize()
-        
     }
     
     func modifyCommentText() -> NSMutableAttributedString {
         
-        var questionLeft = courseManager.allCourses[courseManager.selectedCourseIndex!].courseProgress.completion.questionLeft()
+//        var questionLeft = courseManager.allCourses[courseManager.selectedCourseIndex!].courseProgress.completion.questionLeft()
         //MARK:- temp use
+        var questionLeft = 10
         questionLeft = questionLeft / 3
         
         var boldQuestionNo = ""
@@ -221,7 +224,6 @@ extension CoursesDetailViewController {
 extension CoursesDetailViewController {
     
     func setupNavigationBar() {
-    
         let navigationItem = self.navigationItem
         
         navigationItem.title = courseManager.selectedCourse?.courseTitle
@@ -231,7 +233,7 @@ extension CoursesDetailViewController {
         helpButton.setImage(UIImage(named: "ChartButton.png"), for: .normal)
         helpButton.addTarget(self, action: #selector(studyProfileButton_clicked), for: .touchUpInside)
         helpButton.frame = CGRect(x: 0, y: 0, width: 20, height: 20)
-        helpButton.tintColor = .purpleThemeColor
+        helpButton.tintColor = .primaryThemeColor
         helpButton.contentMode = .scaleAspectFill
 
         let rightHelpButton = UIBarButtonItem(customView: helpButton)
@@ -241,7 +243,6 @@ extension CoursesDetailViewController {
         rightHelpButton.customView?.widthAnchor.constraint(equalToConstant: 30).isActive = true
 
         navigationItem.rightBarButtonItem = rightHelpButton
-
     }
 
     @objc func studyProfileButton_clicked (_ sender: UIBarButtonItem) {

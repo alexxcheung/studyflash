@@ -10,7 +10,6 @@ import UIKit
 
 class CustomQuestionNavigationController: UINavigationController {
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -31,6 +30,4 @@ class CustomQuestionNavigationController: UINavigationController {
         navigationBar.titleTextAttributes = [NSAttributedString.Key.font: UIFont(name: "Helvetica-Bold", size: 20)!, NSAttributedString.Key.foregroundColor: UIColor.gray]
         
     }
-    
-
 }

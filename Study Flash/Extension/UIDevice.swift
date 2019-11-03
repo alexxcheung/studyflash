@@ -20,8 +20,6 @@ extension UIDevice {
         }
         return identifier
     }
-    
-    
 }
 
 func detectDeviceModel() -> Int {
@@ -38,7 +36,6 @@ func detectDeviceModel() -> Int {
             return 2
         }
     }
-    
     return 3
 }
 

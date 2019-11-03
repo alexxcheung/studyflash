@@ -24,7 +24,6 @@ struct Course {
     var courseProgress: CourseProgress
 }
 
-
 struct CourseProgress {
     var state: CourseState
     var dateOfExam: Date!

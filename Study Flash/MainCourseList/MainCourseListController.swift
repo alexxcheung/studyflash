@@ -9,81 +9,65 @@
 import UIKit
 
 class MainCourseListController: UIViewController {
-    
-    var isCourseInProgress: Bool!
-    var isTodayCourseFinished = UserDefaults.standard.bool(forKey: "isTodayCourseFinished")
-    var isNewCourseBegin: Bool = false
-    
+        
     private var myTableView: UITableView!
     
-
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // ----- setUp View
         setupNavigationBar()
-        setUpTableView()
-        
-        // ----- setUp Data
+        configueTableView()
         setupCourseManager()
-
-        // ----- State Management
-        stateManager.checkState()
-        
-        if stateManager.state == .courseSelected {
-
-            //Need to fetch Data from JSON
-            courseManager.selectedCourseIndex = UserDefaults.standard.integer(forKey: "lastSelectedCourseId") - 1
-            print(courseManager.selectedCourseIndex)
-
-            if courseManager.selectedCourseIndex >= 0 {
-                performSegue(withIdentifier: "backToCourseDetail", sender: self)
-                
-                //temp: (exist until courseManager -> persistent)
-                courseManager.allCourses[courseManager.selectedCourseIndex].courseProgress.state = .todayNotCompleted
-
-            }
-        }
-        
+        stateManager.updateState()
+        navigateAccordingToState_FirstLoad()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-//        updateNavigationBar()
         updateCourseList()
+        stateManager.updateState()
+        navigateAccordingToState_ViewWillAppear()
         
-        stateManager.checkState()
-        
-        if stateManager.state == .beginNewCourse {
-            //Return to false
-            UserDefaults.standard.set(false, forKey: "isBeginNewCourse")
-            UserDefaults.standard.synchronize()
-            
-            print("New Course Started!")
+        //unhide tabBar
+        self.tabBarController?.tabBar.isHidden = false
+    }
+    
+    func navigateAccordingToState_FirstLoad() {
+        if stateManager.state == .courseSelected {
+            courseManager.selectedCourseIndex = UserDefaults.standard.integer(forKey: "lastSelectedCourseId")
+            //safeguard
+            guard courseManager.selectedCourseIndex >= 0 else {return}
             
             performSegue(withIdentifier: "backToCourseDetail", sender: self)
+            courseManager.allCourses[courseManager.selectedCourseIndex].courseProgress.state = .todayNotCompleted
         }
+    }
+    
+    func navigateAccordingToState_ViewWillAppear() {
+        if stateManager.state == .beginNewCourse {
+                UserDefaults.standard.set(false, forKey: "isBeginNewCourse")
+                UserDefaults.standard.synchronize()
         
+                performSegue(withIdentifier: "backToCourseDetail", sender: self)
+        }
     }
 }
 
 extension MainCourseListController: UITableViewDelegate, UITableViewDataSource {
     
-    private func setUpTableView() {
-        
-        myTableView = UITableView(frame: .zero)
+    private func configueTableView() {
+        myTableView = UITableView()
         myTableView.register(UINib(nibName: "CoursesTableViewCell", bundle: nil).self, forCellReuseIdentifier: "CoursesTableCell")
         myTableView.register(UINib(nibName: "CoursesTableViewFooterCell", bundle: nil).self, forCellReuseIdentifier: "FooterCell")
         
         myTableView.dataSource = self
         myTableView.delegate = self
         
-        //Eliminate the line
-//        self.myTableView.tableFooterView = UIView()
+        // Eliminate the line
         myTableView.separatorStyle = UITableViewCell.SeparatorStyle.none
         
-        //Reverse TableView
+        // Reverse TableView
         myTableView.transform = CGAffineTransform(rotationAngle: -(CGFloat)(Double.pi))
         
         self.view.addSubview(myTableView)
@@ -106,16 +90,17 @@ extension MainCourseListController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "CoursesTableCell", for: indexPath) as! CoursesTableViewCell
-        //MVVM
+         
+        // MVVM
         cell.courseViewModel = courseManager.courseViewModels[indexPath.row]
         
-        //Reverse TableViewCell
+        // Reverse TableViewCell
         cell.transform = CGAffineTransform(rotationAngle: CGFloat(Double.pi));
         
         return cell
     }
     
-    //setupFooter
+    // setupFooter
     func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
         return 80
     }
@@ -125,37 +110,34 @@ extension MainCourseListController: UITableViewDelegate, UITableViewDataSource {
         return footer
     }
     
-    
-    
-    //Course Selected
+    // Course Selected
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         let selectedCourse = courseManager.allCourses[indexPath.row]
         
-        //save selected course data into global
+        // save selected course data into global
         courseManager.selectedCourse = selectedCourse
         courseManager.selectedCourseIndex = indexPath.row
         
-        //passing course detail to next viewController
+        // passing course detail to next viewController
         if courseManager.selectedCourse?.courseProgress.state == .notStart {
             performSegue(withIdentifier: "startNewCourse", sender: self)
         } else {
             performSegue(withIdentifier: "showCourseDetails", sender: self)
         }
-        
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-
         guard myTableView.indexPathForSelectedRow != nil else {return}
 
-        //deselecting animation
+        // Deselecting animation
         myTableView.deselectRow(at: myTableView.indexPathForSelectedRow!, animated: true)
     }
 }
 
 extension MainCourseListController: UINavigationBarDelegate {
-    //MARK:- Navigation Bar
+    
+    // MARK:- Navigation Bar
     func setupNavigationBar() {
         guard let navigationBar = self.navigationController?.navigationBar else {return}
 
@@ -183,8 +165,6 @@ extension MainCourseListController {
         courseManager.transformCourseToCourseViewModels()
         myTableView.reloadData()
     }
-    
-    
 }
 
 

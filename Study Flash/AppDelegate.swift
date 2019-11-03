@@ -7,17 +7,12 @@
 //
 
 import UIKit
+import CoreData
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-    
-//    func application(_ application: UIApplication, willFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
-//
-//        return false
-//    }
-
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
@@ -27,21 +22,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window = UIWindow()
         window?.makeKeyAndVisible()
         
-        stateManager.checkState()
+        stateManager.updateState()
 
-        //for overall testing
-        let testing = true
+        //for configuring testing
+        let testing = false
         if testing {
             
-            stateManager.state = .FirstLaunch
+            stateManager.state = .firstLaunch
+            stateManager.logState = .loggedOut
+            
             UserDefaults.standard.set(false, forKey: "isTodayCourseFinished")
             UserDefaults.standard.set(false, forKey: "isCourseSelected")
             UserDefaults.standard.synchronize()
-            
         }
         
-        
-        if stateManager.state == .FirstLaunch {
+        if stateManager.state == .firstLaunch {
             let layout = UICollectionViewFlowLayout()
             layout.scrollDirection = .horizontal
             let onboardingViewController = OnboardingViewController(collectionViewLayout: layout)
@@ -50,9 +45,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             
         } else {
             let story = UIStoryboard(name: "Main", bundle: Bundle.main)
-            let mainViewController = story.instantiateViewController(withIdentifier: "NavigationController")
+            let mainViewController = story.instantiateViewController(withIdentifier: "TabBarController")
             
             window?.rootViewController = mainViewController
+            window?.rootViewController?.modalPresentationStyle = .fullScreen
         }
         
         return true
@@ -81,17 +77,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
        
     }
-
-
     
-    //Restortion
-//    func application(_ application: UIApplication, shouldSaveApplicationState coder: NSCoder) -> Bool {
-//        return true
-//    }
-//
-//    func application(_ application: UIApplication, shouldRestoreApplicationState coder: NSCoder) -> Bool {
-//        return true
-//    }
-
+    
+    
 }
 

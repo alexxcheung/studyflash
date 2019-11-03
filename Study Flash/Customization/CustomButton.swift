@@ -9,30 +9,39 @@
 import UIKit
 
 class BottomNormalButton: UIButton {
-    
     required init() {
         super.init(frame: .zero)
-        
-        self.backgroundColor = UIColor.purpleThemeColor
+        configure()
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        configure()
+    }
+    
+    private func configure() {
+        self.backgroundColor = UIColor.primaryThemeColor
         self.tintColor = .white
         self.titleLabel?.lineBreakMode = .byWordWrapping
         self.titleLabel?.textAlignment = .center
         self.titleLabel?.font = .boldSystemFont(ofSize: 16)
         self.titleEdgeInsets = UIEdgeInsets(top: -10,left: -10,bottom: self.titleEdgeInsetBottom,right: -10)
         self.contentEdgeInsets = UIEdgeInsets(top: 10,left: 10,bottom: 10,right: 10)
-        
-    }
-    
-    required init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
     }
 }
 
 class BottomDisableButton: UIButton {
-    
     required init() {
         super.init(frame: .zero)
-        
+        configure()
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        configure()
+    }
+    
+    private func configure() {
         self.backgroundColor = UIColor.lightGray
         self.tintColor = .white
         self.titleLabel?.lineBreakMode = .byWordWrapping
@@ -40,14 +49,7 @@ class BottomDisableButton: UIButton {
         self.titleLabel?.font = .boldSystemFont(ofSize: 16)
         self.titleEdgeInsets = UIEdgeInsets(top: -10,left: -10,bottom: self.titleEdgeInsetBottom,right: -10)
         self.contentEdgeInsets = UIEdgeInsets(top: 10,left: 10,bottom: 10,right: 10)
-        
     }
-    
-    required init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
-    
-    
 }
 
 

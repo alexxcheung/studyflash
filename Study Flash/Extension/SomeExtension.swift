@@ -10,8 +10,6 @@ import Foundation
 import UIKit
 //Not using anyway
 
-
-
 extension UINavigationBar {
     func hideBottomHairline() {
         self.hairlineImageView?.isHidden = true
@@ -21,6 +19,8 @@ extension UINavigationBar {
         self.hairlineImageView?.isHidden = false
     }
 }
+
+
 
 extension UIToolbar {
     func hideBottomHairline() {
