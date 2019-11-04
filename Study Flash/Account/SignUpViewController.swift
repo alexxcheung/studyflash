@@ -12,7 +12,6 @@ class SignUpViewController: UIViewController {
     
     let persistenceManager: PersistenceManager
     
-    
     // MARK: -Dependency Injection - Init
     init?(coder: NSCoder, persistenceManager: PersistenceManager) {
         self.persistenceManager = persistenceManager
@@ -65,12 +64,10 @@ class SignUpViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        setUpUI()
+        setupUI()
         
 //        createUser()
         getUser()
-        
-        
         
     }
     
@@ -96,7 +93,7 @@ class SignUpViewController: UIViewController {
         printUsers()
         
         let deadline = DispatchTime.now() + .seconds(5)
-        DispatchQueue.main.asyncAfter(deadline: deadline, execute: deleteUser)
+//        DispatchQueue.main.asyncAfter(deadline: deadline, execute: deleteUser)
 
     }
     
@@ -120,7 +117,7 @@ class SignUpViewController: UIViewController {
     
     //MARK: - Functions
     
-    func setUpUI() {
+    func setupUI() {
         passwordTextField.isSecureTextEntry = true
         confirmPasswordTextField.isSecureTextEntry = true
     }
@@ -163,7 +160,6 @@ class SignUpViewController: UIViewController {
         
 //        let user = User(name: username, email: email, password: password)
         
-//        print(user)
 
         sendDataToDatabase()
     }
