@@ -66,6 +66,8 @@ class SignUpViewController: UIViewController {
         super.viewDidLoad()
         setupUI()
         
+        printUsers()
+        
 //        createUser()
         getUser()
         
@@ -78,12 +80,7 @@ class SignUpViewController: UIViewController {
     }
     
     func createUser() {
-        let user = User(context: persistenceManager.context)
-        user.username = "david"
-        user.email = "123@gmail.com"
-        user.password = "123"
-        
-        persistenceManager.save()
+
     }
     
     func getUser() {
@@ -112,7 +109,6 @@ class SignUpViewController: UIViewController {
         persistenceManager.delete(firstUser)
         
         printUsers()
-        
     }
     
     //MARK: - Functions
@@ -158,29 +154,26 @@ class SignUpViewController: UIViewController {
             let email = email,
             let password = password else {return}
         
-//        let user = User(name: username, email: email, password: password)
+        let user = User(context: persistenceManager.context)
+        user.username = username
+        user.email = email.address()
+        user.password = password
         
-
-        sendDataToDatabase()
-    }
-    
-    func sendDataToDatabase() {
-        //send user data to database
+        persistenceManager.save()
+        
+        print("Account Created!")
     }
     
     @IBAction func tappedOnSubmitButton(_ sender: Any) {
         // Force End Editing to check
         emailTextField.endEditing(true)
         
-        print(username, email, password)
+        print(username, email?.address(), password)
 
         guard validateAllInput() == true else { return }
 
         createAccount()
-        print("Account Created!")
-        
         dismiss(animated: true, completion: nil)
-        
     }
     
 }
