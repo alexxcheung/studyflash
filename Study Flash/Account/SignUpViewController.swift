@@ -12,7 +12,6 @@ class SignUpViewController: UIViewController {
     
     let persistenceManager: PersistenceManager
     
-    
     // MARK: -Dependency Injection - Init
     init?(coder: NSCoder, persistenceManager: PersistenceManager) {
         self.persistenceManager = persistenceManager
@@ -65,12 +64,12 @@ class SignUpViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        setUpUI()
+        setupUI()
+        
+        printUsers()
         
 //        createUser()
         getUser()
-        
-        
         
     }
     
@@ -81,12 +80,7 @@ class SignUpViewController: UIViewController {
     }
     
     func createUser() {
-        let user = User(context: persistenceManager.context)
-        user.username = "david"
-        user.email = "123@gmail.com"
-        user.password = "123"
-        
-        persistenceManager.save()
+
     }
     
     func getUser() {
@@ -96,7 +90,7 @@ class SignUpViewController: UIViewController {
         printUsers()
         
         let deadline = DispatchTime.now() + .seconds(5)
-        DispatchQueue.main.asyncAfter(deadline: deadline, execute: deleteUser)
+//        DispatchQueue.main.asyncAfter(deadline: deadline, execute: deleteUser)
 
     }
     
@@ -115,12 +109,11 @@ class SignUpViewController: UIViewController {
         persistenceManager.delete(firstUser)
         
         printUsers()
-        
     }
     
     //MARK: - Functions
     
-    func setUpUI() {
+    func setupUI() {
         passwordTextField.isSecureTextEntry = true
         confirmPasswordTextField.isSecureTextEntry = true
     }
@@ -161,30 +154,26 @@ class SignUpViewController: UIViewController {
             let email = email,
             let password = password else {return}
         
-//        let user = User(name: username, email: email, password: password)
+        let user = User(context: persistenceManager.context)
+        user.username = username
+        user.email = email.address()
+        user.password = password
         
-//        print(user)
-
-        sendDataToDatabase()
-    }
-    
-    func sendDataToDatabase() {
-        //send user data to database
+        persistenceManager.save()
+        
+        print("Account Created!")
     }
     
     @IBAction func tappedOnSubmitButton(_ sender: Any) {
         // Force End Editing to check
         emailTextField.endEditing(true)
         
-        print(username, email, password)
+        print(username, email?.address(), password)
 
         guard validateAllInput() == true else { return }
 
         createAccount()
-        print("Account Created!")
-        
         dismiss(animated: true, completion: nil)
-        
     }
     
 }
