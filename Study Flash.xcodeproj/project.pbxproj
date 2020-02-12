@@ -45,6 +45,7 @@
 		118CC31422B2D2FA00CD3B97 /* cisco.json in Resources */ = {isa = PBXBuildFile; fileRef = 118CC31322B2D2FA00CD3B97 /* cisco.json */; };
 		118CC31622B2D41400CD3B97 /* CourseData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 118CC31522B2D41400CD3B97 /* CourseData.swift */; };
 		118CC31A22B2E9FC00CD3B97 /* testing.json in Resources */ = {isa = PBXBuildFile; fileRef = 118CC31922B2E9FC00CD3B97 /* testing.json */; };
+		6E982EED29FCE5F06F8D82DB /* Pods_Study_Flash.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBC683A560F8CE989AD0591D /* Pods_Study_Flash.framework */; };
 		80BEDF1822A17781005B189A /* QuizManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80BEDF1722A17781005B189A /* QuizManager.swift */; };
 		B6812EA42281DC290059ED27 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6812EA32281DC290059ED27 /* AppDelegate.swift */; };
 		B6812EA62281DC290059ED27 /* QuestionsTopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6812EA52281DC290059ED27 /* QuestionsTopViewController.swift */; };
@@ -109,6 +110,8 @@
 		118CC31322B2D2FA00CD3B97 /* cisco.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = cisco.json; sourceTree = "<group>"; };
 		118CC31522B2D41400CD3B97 /* CourseData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseData.swift; sourceTree = "<group>"; };
 		118CC31922B2E9FC00CD3B97 /* testing.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = testing.json; sourceTree = "<group>"; };
+		56BFC3BCBD017D42968C9999 /* Pods-Study Flash.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Study Flash.release.xcconfig"; path = "Target Support Files/Pods-Study Flash/Pods-Study Flash.release.xcconfig"; sourceTree = "<group>"; };
+		5C950B422155761B690B9F48 /* Pods-Study Flash.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Study Flash.debug.xcconfig"; path = "Target Support Files/Pods-Study Flash/Pods-Study Flash.debug.xcconfig"; sourceTree = "<group>"; };
 		80BEDF1722A17781005B189A /* QuizManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizManager.swift; sourceTree = "<group>"; };
 		B6812EA02281DC290059ED27 /* Study Flash.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Study Flash.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B6812EA32281DC290059ED27 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -121,6 +124,7 @@
 		B6812EE7228C47940059ED27 /* QuestionsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionsTableViewController.swift; sourceTree = "<group>"; };
 		B81BABA123054D82000363F8 /* CourseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseViewModel.swift; sourceTree = "<group>"; };
 		B81BABA32306AAF0000363F8 /* UserDefault.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefault.swift; sourceTree = "<group>"; };
+		B8D1CC9723F3D33900E54E26 /* Study Flash.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Study Flash.entitlements"; sourceTree = "<group>"; };
 		B8E037D023407D7B00990691 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		B8E037D22340870600990691 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		B8E037D423408DB000990691 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -128,6 +132,7 @@
 		B8E77EE023016A94006F2372 /* OnboardingSetting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingSetting.swift; sourceTree = "<group>"; };
 		B8E77EE223017CF1006F2372 /* UIDevice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIDevice.swift; sourceTree = "<group>"; };
 		B8F51B0B2302D2FD000C5119 /* StateManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateManager.swift; sourceTree = "<group>"; };
+		CBC683A560F8CE989AD0591D /* Pods_Study_Flash.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Study_Flash.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC8A839C22B285FC003BD494 /* Algorithm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Algorithm.swift; sourceTree = "<group>"; };
 		CC95E7B522B2A4640082EA60 /* TKRadarChart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TKRadarChart.swift; sourceTree = "<group>"; };
 		CC95E7B722B2E2BD0082EA60 /* CourseDetailWithScheduleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseDetailWithScheduleViewController.swift; sourceTree = "<group>"; };
@@ -141,6 +146,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6E982EED29FCE5F06F8D82DB /* Pods_Study_Flash.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -290,6 +296,7 @@
 				B6812EA22281DC290059ED27 /* Study Flash */,
 				B6812EA12281DC290059ED27 /* Products */,
 				C704DBC23A453BB4393BB383 /* Pods */,
+				CE19CE4D6AB93C222FA10A1B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -304,6 +311,7 @@
 		B6812EA22281DC290059ED27 /* Study Flash */ = {
 			isa = PBXGroup;
 			children = (
+				B8D1CC9723F3D33900E54E26 /* Study Flash.entitlements */,
 				B6812EA32281DC290059ED27 /* AppDelegate.swift */,
 				1124A94B2296E44D0048946E /* Storyboard */,
 				117441AE22A40FE300C960E3 /* Manager */,
@@ -348,8 +356,18 @@
 		C704DBC23A453BB4393BB383 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
+				5C950B422155761B690B9F48 /* Pods-Study Flash.debug.xcconfig */,
+				56BFC3BCBD017D42968C9999 /* Pods-Study Flash.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		CE19CE4D6AB93C222FA10A1B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CBC683A560F8CE989AD0591D /* Pods_Study_Flash.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -359,6 +377,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B6812EB22281DC2B0059ED27 /* Build configuration list for PBXNativeTarget "Study Flash" */;
 			buildPhases = (
+				4A0413EB0EF21477A3DFB55A /* [CP] Check Pods Manifest.lock */,
 				B6812E9C2281DC290059ED27 /* Sources */,
 				B6812E9D2281DC290059ED27 /* Frameworks */,
 				B6812E9E2281DC290059ED27 /* Resources */,
@@ -430,6 +449,31 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4A0413EB0EF21477A3DFB55A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Study Flash-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		B6812E9C2281DC290059ED27 /* Sources */ = {
@@ -633,8 +677,10 @@
 		};
 		B6812EB32281DC2B0059ED27 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5C950B422155761B690B9F48 /* Pods-Study Flash.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "Study Flash/Study Flash.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3M89YG2JX8;
 				INFOPLIST_FILE = "Study Flash/Info.plist";
@@ -652,8 +698,10 @@
 		};
 		B6812EB42281DC2B0059ED27 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 56BFC3BCBD017D42968C9999 /* Pods-Study Flash.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "Study Flash/Study Flash.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3M89YG2JX8;
 				INFOPLIST_FILE = "Study Flash/Info.plist";
